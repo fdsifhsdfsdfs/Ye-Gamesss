@@ -1,6 +1,6 @@
 export default function AIPage() {
   return (
-    <div className="flex-grow flex flex-col -m-8">
+    <div className="flex-grow flex flex-col">
       <iframe
         src="https://zerogptai.org/"
         className="w-full h-full flex-grow border-0"
