@@ -16,7 +16,7 @@ export const proxys: Proxy[] = [
     id: '2',
     title: 'Freedom Project',
     description: 'Browse the web without restrictions and with enhanced privacy.',
-    imageUrl: 'https://lh4.googleusercontent.com/YYrlLjKWs5HkNnvEwARc_2NkXYl1IniAYTNPcOjZ9VM7c-JQTEIcIMQF_Zj7wmHx0AjfNeDprdDRrkJ8IqAK2AA',
+    imageUrl: 'https://i.imgur.com/E5UHaXl.png',
     proxyUrl: 'https://weather.meteorological.co/',
     tags: ['internet freedom', 'privacy', 'unblocker'],
     featured: false,
