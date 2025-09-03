@@ -31,6 +31,7 @@ export default function GamesPage() {
   const gameCardHints: { [key:string]: string } = {
     '1': 'abstract circle',
     '2': 'survival game',
+    '3': 'monkey supermarket',
   };
 
   return (
