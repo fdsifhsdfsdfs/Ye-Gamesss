@@ -31,7 +31,7 @@ export default function ProxysPage() {
   const proxyCardHints: { [key:string]: string } = {
     '1': 'doge meme',
     '2': 'anonymous browsing',
-    '3': 'internet freedom',
+    '3': 'rammerhead logo',
     '4': 'privacy shield',
   };
 

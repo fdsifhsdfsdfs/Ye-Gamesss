@@ -21,5 +21,15 @@ export const proxys: Proxy[] = [
     tags: ['internet freedom', 'privacy', 'unblocker'],
     featured: false,
     createdAt: new Date('2024-07-29T11:00:00.000Z'),
+  },
+  {
+    id: '3',
+    title: 'Rammerhead',
+    description: 'A powerful web proxy for unrestricted browsing.',
+    imageUrl: 'https://i.imgur.com/lj1y4kn.png',
+    proxyUrl: 'https://scienceworksheets.errorrail.dev/',
+    tags: ['web proxy', 'unblocker', 'rammerhead'],
+    featured: false,
+    createdAt: new Date('2024-07-30T12:00:00.000Z'),
   }
 ];
