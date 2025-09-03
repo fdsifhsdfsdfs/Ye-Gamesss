@@ -33,6 +33,7 @@ export default function GamesPage() {
     '2': 'survival game',
     '3': 'monkey supermarket',
     '4': 'truck jumping',
+    '5': 'block world',
   };
 
   return (
