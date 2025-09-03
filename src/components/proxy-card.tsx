@@ -11,10 +11,8 @@ interface ProxyCardProps {
 }
 
 export function ProxyCard({ proxy, dataAiHint }: ProxyCardProps) {
-  const iframeSrc = `data:text/html,<body style="margin:0;padding:0;overflow:hidden;"><iframe src="${proxy.proxyUrl}" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe></body>`;
-
   return (
-    <a href={iframeSrc} className="group block" target="_blank" rel="noopener noreferrer">
+    <a href={proxy.proxyUrl} className="group block" target="_blank" rel="noopener noreferrer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
