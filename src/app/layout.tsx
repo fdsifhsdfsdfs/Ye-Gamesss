@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toaster';
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Ye-Games',
@@ -26,6 +27,7 @@ export default function RootLayout({
           <main className="flex-1 container mx-auto px-4 py-8">
             {children}
           </main>
+          <Footer />
         </div>
         <Toaster />
       </body>
