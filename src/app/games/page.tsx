@@ -38,6 +38,7 @@ export default function GamesPage() {
     '7': 'scary animatronic',
     '8': 'idle breakout',
     '9': 'drift car',
+    '10': 'case clicker',
   };
 
   return (

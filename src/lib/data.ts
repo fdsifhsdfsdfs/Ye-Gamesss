@@ -91,5 +91,15 @@ export const games: Game[] = [
     tags: ['driving', 'drifting', 'skill', 'arcade'],
     featured: false,
     createdAt: new Date('2024-08-05T10:00:00.000Z'),
+  },
+  {
+    id: '10',
+    title: 'Case Clicker',
+    description: 'Click to open cases and collect rare items in this addictive clicking game.',
+    imageUrl: 'https://iili.io/KB02cX9.webp',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://mtsl.dk/csgo/',
+    tags: ['clicker', 'simulation', 'idle'],
+    featured: false,
+    createdAt: new Date('2024-08-06T10:00:00.000Z'),
   }
 ];
