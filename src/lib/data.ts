@@ -61,5 +61,15 @@ export const games: Game[] = [
     tags: ['simulation', 'driving', 'physics'],
     featured: false,
     createdAt: new Date('2024-08-02T10:00:00.000Z'),
+  },
+  {
+    id: '7',
+    title: 'FNAF',
+    description: 'Survive five nights at Freddy Fazbear\'s Pizzeria in this terrifying horror game.',
+    imageUrl: 'https://iili.io/KBciryx.jpg',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/',
+    tags: ['horror', 'survival', 'point-and-click'],
+    featured: false,
+    createdAt: new Date('2024-08-03T10:00:00.000Z'),
   }
 ];

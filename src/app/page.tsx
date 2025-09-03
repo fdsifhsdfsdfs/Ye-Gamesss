@@ -15,6 +15,7 @@ export default function Home() {
     '4': 'truck jumping',
     '5': 'block world',
     '6': 'car crash',
+    '7': 'scary animatronic',
   };
 
   return (
