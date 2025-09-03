@@ -71,5 +71,15 @@ export const games: Game[] = [
     tags: ['horror', 'survival', 'point-and-click'],
     featured: false,
     createdAt: new Date('2024-08-03T10:00:00.000Z'),
+  },
+  {
+    id: '8',
+    title: 'Idle Breakout',
+    description: 'Break blocks, earn money, and upgrade your balls in this addictive idle game.',
+    imageUrl: 'https://iili.io/KBcDYTG.png',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://idle-breakout.neocities.org/',
+    tags: ['idle', 'arcade', 'clicker', 'breakout'],
+    featured: false,
+    createdAt: new Date('2024-08-04T10:00:00.000Z'),
   }
 ];

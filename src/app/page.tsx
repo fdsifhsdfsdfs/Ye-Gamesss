@@ -16,6 +16,7 @@ export default function Home() {
     '5': 'block world',
     '6': 'car crash',
     '7': 'scary animatronic',
+    '8': 'idle breakout',
   };
 
   return (
