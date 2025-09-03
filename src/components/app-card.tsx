@@ -13,7 +13,7 @@ interface AppCardProps {
 
 export function AppCard({ app, dataAiHint }: AppCardProps) {
   return (
-    <Link href={app.appUrl} className="group block" target="_blank" rel="noopener noreferrer">
+    <a href={app.appUrl} className="group block" target="_blank" rel="noopener noreferrer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
@@ -40,6 +40,6 @@ export function AppCard({ app, dataAiHint }: AppCardProps) {
           </div>
         </CardContent>
       </Card>
-    </Link>
+    </a>
   );
 }
