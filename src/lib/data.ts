@@ -31,5 +31,15 @@ export const games: Game[] = [
     tags: ['management', 'simulation', 'casual', 'strategy'],
     featured: false,
     createdAt: new Date(),
+  },
+  {
+    id: '4',
+    title: 'Cluster Rush',
+    description: 'Jump from truck to truck in a high-speed, high-stakes game of agility and timing.',
+    imageUrl: 'https://m.funkypotato.com/wp-content/uploads/2024/08/cluster-rush.jpg',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec',
+    tags: ['action', 'platformer', '3d', 'fast-paced'],
+    featured: false,
+    createdAt: new Date(),
   }
 ];

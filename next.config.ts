@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'play-lh.googleusercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'm.funkypotato.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

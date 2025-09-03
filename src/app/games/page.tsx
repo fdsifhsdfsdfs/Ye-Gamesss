@@ -32,6 +32,7 @@ export default function GamesPage() {
     '1': 'abstract circle',
     '2': 'survival game',
     '3': 'monkey supermarket',
+    '4': 'truck jumping',
   };
 
   return (
