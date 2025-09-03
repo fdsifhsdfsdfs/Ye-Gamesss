@@ -49,7 +49,7 @@ export const games: Game[] = [
     imageUrl: 'https://static.wikia.nocookie.net/logopedia/images/f/f9/Minecraft_Bedrock_icon.svg/revision/latest/scale-to-width-down/250?cb=20230924021517',
     gameUrl: 'https://embeddr.rhw.one/embed#https://eaglercraft.com/mc/1.8.8',
     tags: ['sandbox', 'survival', 'building', 'adventure'],
-    featured: false,
+    featured: true,
     createdAt: new Date('2024-07-26T14:00:00.000Z'),
   },
   {
@@ -79,7 +79,7 @@ export const games: Game[] = [
     imageUrl: 'https://iili.io/KBcDYTG.png',
     gameUrl: 'https://embeddr.rhw.one/embed#https://idle-breakout.neocities.org/',
     tags: ['idle', 'arcade', 'clicker', 'breakout'],
-    featured: false,
+    featured: true,
     createdAt: new Date('2024-08-04T10:00:00.000Z'),
   },
   {
