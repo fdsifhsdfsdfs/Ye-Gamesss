@@ -1,3 +1,4 @@
+'use client';
 
 import type { Game } from '@/lib/types';
 import Image from 'next/image';
@@ -11,8 +12,38 @@ interface GameCardProps {
 }
 
 export function GameCard({ game, dataAiHint }: GameCardProps) {
+  const handleClick = () => {
+    const newWindow = window.open('about:blank', '_blank');
+    if (newWindow) {
+      newWindow.document.write(`
+        <html style="height:100%;margin:0;padding:0;">
+          <head>
+            <title>${game.title}</title>
+            <style>
+              body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                overflow: hidden;
+              }
+              iframe {
+                border: none;
+                width: 100%;
+                height: 100%;
+              }
+            </style>
+          </head>
+          <body>
+            <iframe src="${game.gameUrl}"></iframe>
+          </body>
+        </html>
+      `);
+      newWindow.document.close();
+    }
+  };
+
   return (
-    <a href={game.gameUrl} className="group block" target="_blank" rel="noopener noreferrer">
+    <div onClick={handleClick} className="group block cursor-pointer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
@@ -39,6 +70,6 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
           </div>
         </CardContent>
       </Card>
-    </a>
+    </div>
   );
 }
