@@ -29,7 +29,7 @@ export default function ProxysPage() {
   }, [searchTerm, selectedTag]);
 
   const proxyCardHints: { [key:string]: string } = {
-    '1': 'secure network',
+    '1': 'doge meme',
     '2': 'anonymous browsing',
     '3': 'internet freedom',
     '4': 'privacy shield',
