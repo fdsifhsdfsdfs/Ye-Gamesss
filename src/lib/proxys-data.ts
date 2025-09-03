@@ -31,5 +31,15 @@ export const proxys: Proxy[] = [
     tags: ['web proxy', 'unblocker', 'rammerhead'],
     featured: false,
     createdAt: new Date('2024-07-30T12:00:00.000Z'),
+  },
+  {
+    id: '4',
+    title: 'DayDreamX',
+    description: 'Experience the web with a new perspective.',
+    imageUrl: 'https://i.imgur.com/hMHqgrN.png',
+    proxyUrl: 'https://donate.helping-hands.site/',
+    tags: ['web proxy', 'unblocker', 'daydream'],
+    featured: false,
+    createdAt: new Date('2024-07-31T13:00:00.000Z'),
   }
 ];
