@@ -25,7 +25,6 @@ export function ProxyCard({ proxy, dataAiHint }: ProxyCardProps) {
               className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               data-ai-hint={dataAiHint}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           </div>
         </CardHeader>
         <CardContent className="p-4 flex flex-col flex-grow">
