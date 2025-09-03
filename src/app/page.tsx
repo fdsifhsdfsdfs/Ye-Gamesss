@@ -9,12 +9,7 @@ export default function Home() {
   const recentGames = [...games].sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime()).slice(0, 4);
 
   const gameCardHints: { [key: string]: string } = {
-    '1': 'space race',
-    '2': 'cyberpunk ninja',
-    '3': 'magical forest',
-    '4': 'dungeon crawler',
-    '5': 'giant mech',
-    '6': 'abstract spheres'
+    '1': 'abstract circle',
   };
 
   return (

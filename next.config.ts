@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn-1.webcatalog.io',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
