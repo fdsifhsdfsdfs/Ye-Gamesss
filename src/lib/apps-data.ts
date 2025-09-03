@@ -10,6 +10,6 @@ export const apps: App[] = [
     appUrl: 'https://embeddr.rhw.one/embed#https://pstream.mov',
     tags: ['streaming', 'movies', 'tv shows', 'entertainment'],
     featured: true,
-    createdAt: new Date(),
+    createdAt: new Date('2024-07-26T15:00:00.000Z'),
   }
 ];

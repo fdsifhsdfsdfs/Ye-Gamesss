@@ -20,7 +20,7 @@ export const games: Game[] = [
     gameUrl: 'https://firebasestorage.googleapis.com/v0/b/test-1e83a.appspot.com/o/sg.html?alt=media&token=3a831154-d98f-4ee8-b134-6147678bdef8',
     tags: ['action', 'survival', 'mini-games'],
     featured: false,
-    createdAt: new Date(),
+    createdAt: new Date('2024-07-26T11:00:00.000Z'),
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const games: Game[] = [
     gameUrl: 'https://monkeymart-unblocked.com/game',
     tags: ['management', 'simulation', 'casual', 'strategy'],
     featured: false,
-    createdAt: new Date(),
+    createdAt: new Date('2024-07-26T12:00:00.000Z'),
   },
   {
     id: '4',
@@ -40,7 +40,7 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec',
     tags: ['action', 'platformer', '3d', 'fast-paced'],
     featured: false,
-    createdAt: new Date(),
+    createdAt: new Date('2024-07-26T13:00:00.000Z'),
   },
   {
     id: '5',
@@ -50,6 +50,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://eaglercraft.com/mc/1.8.8',
     tags: ['sandbox', 'survival', 'building', 'adventure'],
     featured: false,
-    createdAt: new Date(),
+    createdAt: new Date('2024-07-26T14:00:00.000Z'),
   }
 ];
