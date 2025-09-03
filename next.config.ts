@@ -76,6 +76,12 @@ const nextConfig: NextConfig = {
         hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.inet-web.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

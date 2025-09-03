@@ -11,5 +11,15 @@ export const apps: App[] = [
     tags: ['streaming', 'movies', 'tv shows', 'entertainment'],
     featured: true,
     createdAt: new Date('2024-07-26T15:00:00.000Z'),
+  },
+  {
+    id: '2',
+    title: 'Youtube',
+    description: 'Watch, stream, and discover what the world is watching.',
+    imageUrl: 'https://www.inet-web.com/Content/files/GamingChannelTips.jpg',
+    appUrl: 'https://embeddr.rhw.one/embed#https://Youtube.com',
+    tags: ['video', 'streaming', 'entertainment'],
+    featured: false,
+    createdAt: new Date('2024-08-01T10:00:00.000Z'),
   }
 ];

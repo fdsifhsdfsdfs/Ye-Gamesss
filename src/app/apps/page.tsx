@@ -30,7 +30,7 @@ export default function AppsPage() {
 
   const appCardHints: { [key:string]: string } = {
     '1': 'photo editor',
-    '2': 'code snippet',
+    '2': 'youtube logo',
     '3': 'mind map',
     '4': 'habit tracker',
   };
