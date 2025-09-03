@@ -33,7 +33,8 @@ export default function GamesPage() {
     '2': 'cyberpunk ninja',
     '3': 'magical forest',
     '4': 'dungeon crawler',
-    '5': 'giant mech'
+    '5': 'giant mech',
+    '6': 'abstract spheres'
   };
 
   return (

@@ -51,4 +51,14 @@ export const games: Game[] = [
     featured: false,
     createdAt: new Date('2024-05-19T18:00:00Z'),
   },
+  {
+    id: '6',
+    title: 'Core Ball',
+    description: 'A simple and addictive game where you test your timing and precision. Attach orbiting balls to a central core without them colliding.',
+    imageUrl: 'https://picsum.photos/seed/coreball/600/400',
+    gameUrl: 'https://weather.meteorological.co/~/fp/hvtrs8%2F-tmpaope%60anl%2Ccmm-',
+    tags: ['Arcade', 'Skill', 'Minimalist', 'Addictive'],
+    featured: false,
+    createdAt: new Date('2024-05-22T16:00:00Z'),
+  }
 ];
