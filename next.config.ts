@@ -45,6 +45,12 @@ const nextConfig: NextConfig = {
         hostname: 'm.funkypotato.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'rocketgames.imgix.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
