@@ -38,8 +38,8 @@ export default function ProxysPage() {
   return (
     <div className="space-y-8">
       <section>
-        <h1 className="font-headline text-4xl font-bold tracking-tighter mb-2">Proxy Library</h1>
-        <p className="text-muted-foreground">Search and filter through our entire collection of proxys.</p>
+        <h1 className="font-headline text-4xl font-bold tracking-tighter mb-2">Pr*xy Library</h1>
+        <p className="text-muted-foreground">Search and filter through our entire collection of pr*xys.</p>
       </section>
 
       <div className="flex flex-col md:flex-row gap-4">
@@ -47,7 +47,7 @@ export default function ProxysPage() {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           <Input
             type="search"
-            placeholder="Search proxys by title or description..."
+            placeholder="Search pr*xys by title or description..."
             className="pl-10"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -75,7 +75,7 @@ export default function ProxysPage() {
         </div>
       ) : (
         <div className="text-center py-16 border border-dashed rounded-lg">
-          <h3 className="font-headline text-xl font-semibold">No Proxys Found</h3>
+          <h3 className="font-headline text-xl font-semibold">No Pr*xys Found</h3>
           <p className="text-muted-foreground mt-2">Try a different search or filter.</p>
         </div>
       )}

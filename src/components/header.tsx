@@ -9,7 +9,7 @@ const navItems = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/games', label: 'Games', icon: Gamepad2 },
   { href: '/apps', label: 'Apps', icon: AppWindow },
-  { href: '/proxys', label: 'Proxys', icon: Server },
+  { href: '/proxys', label: 'Pr*xys', icon: Server },
   { href: '/ai', label: 'AI', icon: Brain },
 ];
 
