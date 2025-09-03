@@ -1,3 +1,4 @@
+
 import type { Game } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,11 +16,11 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
     <Link href={game.gameUrl} className="group block" target="_blank" rel="noopener noreferrer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
-          <div className="relative aspect-video overflow-hidden">
+          <div className="relative aspect-square overflow-hidden">
             <Image
               src={game.imageUrl}
               alt={game.title}
-              width={600}
+              width={400}
               height={400}
               className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               data-ai-hint={dataAiHint}

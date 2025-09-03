@@ -1,3 +1,4 @@
+
 import type { App } from './types';
 
 export const apps: App[] = [
@@ -5,7 +6,7 @@ export const apps: App[] = [
     id: '1',
     title: 'Photo Editor Pro',
     description: 'A powerful photo editor with advanced features and filters. Edit your photos like a pro.',
-    imageUrl: 'https://picsum.photos/seed/photoeditor/600/400',
+    imageUrl: 'https://picsum.photos/seed/photoeditor/400/400',
     appUrl: '#',
     tags: ['Productivity', 'Photo', 'Editing'],
     featured: true,
@@ -15,7 +16,7 @@ export const apps: App[] = [
     id: '2',
     title: 'Code Snippet Manager',
     description: 'Organize and sync your code snippets across all devices. Never lose a piece of code again.',
-    imageUrl: 'https://picsum.photos/seed/codesnippet/600/400',
+    imageUrl: 'https://picsum.photos/seed/codesnippet/400/400',
     appUrl: '#',
     tags: ['Development', 'Utilities', 'Productivity'],
     featured: true,
@@ -25,7 +26,7 @@ export const apps: App[] = [
     id: '3',
     title: 'Mind Map Maker',
     description: 'Visualize your ideas with an intuitive mind mapping tool. Great for brainstorming and planning.',
-    imageUrl: 'https://picsum.photos/seed/mindmap/600/400',
+    imageUrl: 'https://picsum.photos/seed/mindmap/400/400',
     appUrl: '#',
     tags: ['Productivity', 'Planning', 'Organization'],
     featured: true,
@@ -35,7 +36,7 @@ export const apps: App[] = [
     id: '4',
     title: 'Habit Tracker',
     description: 'Build good habits and break bad ones with this simple yet effective habit tracker.',
-    imageUrl: 'https://picsum.photos/seed/habittracker/600/400',
+    imageUrl: 'https://picsum.photos/seed/habittracker/400/400',
     appUrl: '#',
     tags: ['Lifestyle', 'Productivity', 'Health'],
     featured: false,

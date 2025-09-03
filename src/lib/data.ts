@@ -1,3 +1,4 @@
+
 import type { Game } from './types';
 
 export const games: Game[] = [
@@ -5,7 +6,7 @@ export const games: Game[] = [
     id: '1',
     title: 'Cosmic Drift',
     description: 'A space-themed racing game with stunning visuals and tight controls. Drift through asteroid fields and nebulae to become the galaxy\'s champion.',
-    imageUrl: 'https://picsum.photos/seed/cosmic/600/400',
+    imageUrl: 'https://picsum.photos/seed/cosmic/400/400',
     gameUrl: '#',
     tags: ['Sci-Fi', 'Racing', 'Indie', 'Space'],
     featured: true,
@@ -15,7 +16,7 @@ export const games: Game[] = [
     id: '2',
     title: 'Cyberpunk Ninja',
     description: 'Dash and slash through a dystopian city in this fast-paced action platformer. Use your cybernetic enhancements to take down the corporate overlords.',
-    imageUrl: 'https://picsum.photos/seed/cyberpunk/600/400',
+    imageUrl: 'https://picsum.photos/seed/cyberpunk/400/400',
     gameUrl: '#',
     tags: ['Cyberpunk', 'Action', 'Platformer', 'Pixel Art'],
     featured: true,
@@ -25,7 +26,7 @@ export const games: Game[] = [
     id: '3',
     title: 'Forest Guardian',
     description: 'A tranquil adventure game where you protect a magical forest. Solve puzzles, befriend woodland creatures, and restore balance to the ancient woods.',
-    imageUrl: 'https://picsum.photos/seed/forest/600/400',
+    imageUrl: 'https://picsum.photos/seed/forest/400/400',
     gameUrl: '#',
     tags: ['Adventure', 'Puzzle', 'Relaxing', 'Fantasy'],
     featured: true,
@@ -35,7 +36,7 @@ export const games: Game[] = [
     id: '4',
     title: 'Dungeon Rogue',
     description: 'A classic roguelike experience. Crawl through procedurally generated dungeons, fight monsters, and collect loot. Every run is a new adventure.',
-    imageUrl: 'https://picsum.photos/seed/dungeon/600/400',
+    imageUrl: 'https://picsum.photos/seed/dungeon/400/400',
     gameUrl: '#',
     tags: ['Rogulike', 'Dungeon Crawler', 'RPG', 'Fantasy'],
     featured: false,
@@ -45,7 +46,7 @@ export const games: Game[] = [
     id: '5',
     title: 'Mecha Assault',
     description: 'Pilot giant mechs and engage in explosive combat. Customize your robot with a vast arsenal of weapons and fight in epic online battles.',
-    imageUrl: 'https://picsum.photos/seed/mecha/600/400',
+    imageUrl: 'https://picsum.photos/seed/mecha/400/400',
     gameUrl: '#',
     tags: ['Action', 'Mechs', 'Multiplayer', 'Sci-Fi'],
     featured: false,
@@ -55,7 +56,7 @@ export const games: Game[] = [
     id: '6',
     title: 'Core Ball',
     description: 'A simple and addictive game where you test your timing and precision. Attach orbiting balls to a central core without them colliding.',
-    imageUrl: 'https://picsum.photos/seed/coreball/600/400',
+    imageUrl: 'https://picsum.photos/seed/coreball/400/400',
     gameUrl: 'https://weather.meteorological.co/~/fp/hvtrs8%2F-tmpaope%60anl%2Ccmm-',
     tags: ['Arcade', 'Skill', 'Minimalist', 'Addictive'],
     featured: false,
