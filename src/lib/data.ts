@@ -29,7 +29,7 @@ export const games: Game[] = [
     imageUrl: 'https://play-lh.googleusercontent.com/rWReIdyvDaYJPeOxn7hbC0b-96ixGpQKM_EndiQa3SUME8TtI_rNUcI4qsw5teK9mqk',
     gameUrl: 'https://monkeymart-unblocked.com/game',
     tags: ['management', 'simulation', 'casual', 'strategy'],
-    featured: false,
+    featured: true,
     createdAt: new Date('2024-07-26T12:00:00.000Z'),
   },
   {
