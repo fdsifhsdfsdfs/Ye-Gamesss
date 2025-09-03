@@ -14,6 +14,7 @@ export default function Home() {
     '3': 'monkey supermarket',
     '4': 'truck jumping',
     '5': 'block world',
+    '6': 'car crash',
   };
 
   return (

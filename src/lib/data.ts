@@ -51,5 +51,15 @@ export const games: Game[] = [
     tags: ['sandbox', 'survival', 'building', 'adventure'],
     featured: false,
     createdAt: new Date('2024-07-26T14:00:00.000Z'),
+  },
+  {
+    id: '6',
+    title: 'Car Crash',
+    description: 'A realistic car crash simulator. Test the limits of destruction.',
+    imageUrl: 'https://iili.io/KBcIBea.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwnHhMofGNjZt4xEn7HZJTUBs2klhlPV7mk4-_LGHESeYIFmtQiGn0gr3VT52AZna0U/exec',
+    tags: ['simulation', 'driving', 'physics'],
+    featured: false,
+    createdAt: new Date('2024-08-02T10:00:00.000Z'),
   }
 ];

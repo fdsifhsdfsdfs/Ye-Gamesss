@@ -82,6 +82,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.inet-web.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'iili.io',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
