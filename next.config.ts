@@ -58,6 +58,12 @@ const nextConfig: NextConfig = {
         hostname: 'static.wikia.nocookie.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
