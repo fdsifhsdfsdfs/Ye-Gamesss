@@ -17,6 +17,7 @@ export default function Home() {
     '6': 'car crash',
     '7': 'scary animatronic',
     '8': 'idle breakout',
+    '9': 'drift car',
   };
 
   return (

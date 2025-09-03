@@ -81,5 +81,15 @@ export const games: Game[] = [
     tags: ['idle', 'arcade', 'clicker', 'breakout'],
     featured: false,
     createdAt: new Date('2024-08-04T10:00:00.000Z'),
+  },
+  {
+    id: '9',
+    title: 'Drift Boss',
+    description: 'Show off your driving skills by drifting through tight corners.',
+    imageUrl: 'https://iili.io/KBlF5Xt.jpg',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://cdn-factory.marketjs.com/en/drift-boss/index.html',
+    tags: ['driving', 'drifting', 'skill', 'arcade'],
+    featured: false,
+    createdAt: new Date('2024-08-05T10:00:00.000Z'),
   }
 ];
