@@ -11,5 +11,15 @@ export const proxys: Proxy[] = [
     tags: ['web proxy', 'unblocker', 'privacy'],
     featured: true,
     createdAt: new Date('2024-07-28T10:00:00.000Z'),
+  },
+  {
+    id: '2',
+    title: 'Freedom Project',
+    description: 'Browse the web without restrictions and with enhanced privacy.',
+    imageUrl: 'https://lh4.googleusercontent.com/YYrlLjKWs5HkNnvEwARc_2NkXYl1IniAYTNPcOjZ9VM7c-JQTEIcIMQF_Zj7wmHx0AjfNeDprdDRrkJ8IqAK2AA',
+    proxyUrl: 'https://weather.meteorological.co/',
+    tags: ['internet freedom', 'privacy', 'unblocker'],
+    featured: false,
+    createdAt: new Date('2024-07-29T11:00:00.000Z'),
   }
 ];
