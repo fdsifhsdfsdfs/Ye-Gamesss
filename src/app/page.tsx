@@ -23,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
         <div className="absolute top-0 left-0 -z-10 h-2/3 w-full bg-gradient-to-b from-primary/10 to-transparent"></div>
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-4 animate-fade-in-up">
-          Dynamic Gaming Universes
+          Ye Games
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-8 animate-fade-in-up [animation-delay:0.2s]">
           Discover, play, and manage your next favorite game. Ye-Games is your portal to worlds of adventure.
