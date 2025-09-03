@@ -1,9 +1,9 @@
 export default function AIPage() {
   return (
-    <div className="flex-grow flex flex-col">
+    <div className="absolute inset-0 top-14">
       <iframe
         src="https://zerogptai.org/"
-        className="w-full h-full flex-grow border-0"
+        className="w-full h-full border-0"
         title="AI Page Embed"
         allow="fullscreen"
       />
