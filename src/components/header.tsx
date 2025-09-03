@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Gamepad2, Home, AppWindow, Server, Brain } from 'lucide-react';
+import { Home, AppWindow, Server, Brain, Gamepad2 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -20,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <Link href="/" className="flex items-center gap-2 mr-6">
-          <Gamepad2 className="h-6 w-6 text-primary" />
+          <Image src="https://iili.io/KBlX1Wl.png" alt="Ye-Games Logo" width={28} height={28} />
           <span className="font-bold font-headline text-lg">Ye-Games</span>
         </Link>
         <nav className="flex items-center gap-4 text-sm lg:gap-6 flex-grow">
