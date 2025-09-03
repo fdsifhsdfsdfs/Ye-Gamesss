@@ -70,6 +70,12 @@ const nextConfig: NextConfig = {
         hostname: 'lh4.googleusercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
