@@ -41,7 +41,7 @@ export default function Home() {
 
       <section>
         <h2 className="font-headline text-3xl font-bold mb-6">Featured Games</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featuredGames.map(game => (
             <GameCard key={game.id} game={game} dataAiHint={gameCardHints[game.id]} />
           ))}
