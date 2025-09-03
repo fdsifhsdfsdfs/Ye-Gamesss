@@ -1,10 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Gamepad2, Home, PlusSquare } from 'lucide-react';
+import { Gamepad2, Home } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -35,11 +34,6 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Button asChild>
-          <Link href="/admin/add-game">
-            <PlusSquare className="mr-2 h-4 w-4" /> Add Game
-          </Link>
-        </Button>
       </div>
     </header>
   );

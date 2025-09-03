@@ -1,7 +1,7 @@
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { games } from '@/lib/data';
-import { ArrowRight, Gamepad2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -30,9 +30,6 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up [animation-delay:0.4s]">
           <Button asChild size="lg">
             <Link href="/games">Browse Games <ArrowRight className="ml-2 h-5 w-5" /></Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link href="/admin/add-game">Add New Game <Gamepad2 className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
       </section>
