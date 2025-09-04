@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, AppWindow, Server, Brain, Gamepad2 } from 'lucide-react';
+import { Home, AppWindow, Server, Brain, Gamepad2, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -38,6 +38,17 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/settings"
+            className={cn(
+              'transition-colors hover:text-foreground/80',
+              pathname === '/settings' ? 'text-foreground' : 'text-foreground/60'
+            )}
+          >
+            <Settings className="h-5 w-5" />
+          </Link>
+        </div>
       </div>
     </header>
   );
