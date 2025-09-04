@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { games } from '@/lib/data';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { CrtEffect } from '@/components/crt-effect';
 
 export default function Home() {
   const featuredGames = games.filter(g => g.featured).slice(0, 4);
@@ -38,6 +39,8 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      <CrtEffect />
 
       <section>
         <h2 className="font-headline text-3xl font-bold mb-6">Featured Games</h2>
