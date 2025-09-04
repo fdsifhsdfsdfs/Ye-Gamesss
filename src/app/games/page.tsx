@@ -40,6 +40,7 @@ export default function GamesPage() {
     '9': 'drift car',
     '10': 'case clicker',
     '11': 'cookie clicker',
+    '12': 'endless runner',
   };
 
   return (
