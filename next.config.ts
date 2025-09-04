@@ -1,9 +1,8 @@
-
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   // Enable static export
-  output: 'export',
+  output: 'export',  // Static export mode
 
   // TypeScript and ESLint settings
   typescript: {
@@ -13,9 +12,9 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  // Image optimization settings for remote images
+  // Image settings
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Disable image optimization for static export
     remotePatterns: [
       {
         protocol: 'https',
