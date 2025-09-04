@@ -106,7 +106,7 @@ export const games: Game[] = [
     id: '12',
     title: 'Slope',
     description: 'An endless runner game where you control a ball down a series of slopes.',
-    imageUrl: 'https://gamepluto.com/images/game/slope/slope-icon.jpg',
+    imageUrl: 'https://i.imgur.com/dIXzNL7.jpeg',
     gameUrl: 'https://embeddr.rhw.one/embed#https://azgames.io/game/slope/',
     tags: ['endless runner', '3d', 'skill', 'arcade'],
     featured: false,
