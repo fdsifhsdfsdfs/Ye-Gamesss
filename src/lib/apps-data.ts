@@ -16,7 +16,7 @@ export const apps: App[] = [
     title: 'Youtube',
     description: 'Watch, stream, and discover what the world is watching.',
     imageUrl: 'https://www.inet-web.com/Content/files/GamingChannelTips.jpg',
-    appUrl: 'https://youtube.com',
+    appUrl: 'https://embeddr.rhw.one/embed#https://Youtube.co',
     tags: ['video', 'streaming', 'entertainment'],
     featured: false,
   }
