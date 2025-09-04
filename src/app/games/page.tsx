@@ -41,7 +41,6 @@ export default function GamesPage() {
     '10': 'case clicker',
     '11': 'cookie clicker',
     '12': 'endless runner',
-    '13': 'retro football',
   };
 
   return (

@@ -13,7 +13,6 @@ export default function Home() {
     '3': 'monkey supermarket',
     '5': 'block world',
     '8': 'idle breakout',
-    '13': 'retro football'
   };
 
   return (
