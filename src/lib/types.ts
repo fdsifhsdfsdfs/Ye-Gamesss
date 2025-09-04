@@ -6,7 +6,6 @@ export interface Game {
   gameUrl: string;
   tags: string[];
   featured?: boolean;
-  createdAt: Date;
 }
 
 export interface App {
@@ -17,7 +16,6 @@ export interface App {
   appUrl: string;
   tags: string[];
   featured?: boolean;
-  createdAt: Date;
 }
 
 export interface Proxy {
@@ -28,5 +26,4 @@ export interface Proxy {
   proxyUrl: string;
   tags: string[];
   featured?: boolean;
-  createdAt: Date;
 }

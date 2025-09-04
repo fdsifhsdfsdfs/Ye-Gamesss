@@ -10,7 +10,6 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbyob7HxkiW2e0yT22QRiejnA_alDdUkPnrNirnvCX1HYPriGPR6_GZ2i1RsglPytlFo/exec',
     tags: ['arcade', 'puzzle', 'skill', 'minimalist'],
     featured: true,
-    createdAt: new Date('2024-07-26T10:00:00.000Z'),
   },
   {
     id: '3',
@@ -20,7 +19,6 @@ export const games: Game[] = [
     gameUrl: 'https://monkeymart-unblocked.com/game',
     tags: ['management', 'simulation', 'casual', 'strategy'],
     featured: true,
-    createdAt: new Date('2024-07-26T12:00:00.000Z'),
   },
   {
     id: '4',
@@ -30,7 +28,6 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbw6e8fflbfydV7kom5id09nKaM6ix0hLlXHbs3XHOnxzrndUgPtHUHENrwKomI2Hpk3/exec',
     tags: ['action', 'platformer', '3d', 'fast-paced'],
     featured: false,
-    createdAt: new Date('2024-07-26T13:00:00.000Z'),
   },
   {
     id: '5',
@@ -40,7 +37,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://eaglercraft.com/mc/1.8.8',
     tags: ['sandbox', 'survival', 'building', 'adventure'],
     featured: true,
-    createdAt: new Date('2024-07-26T14:00:00.000Z'),
   },
   {
     id: '6',
@@ -50,17 +46,15 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbwnHhMofGNjZt4xEn7HZJTUBs2klhlPV7mk4-_LGHESeYIFmtQiGn0gr3VT52AZna0U/exec',
     tags: ['simulation', 'driving', 'physics'],
     featured: false,
-    createdAt: new Date('2024-08-02T10:00:00.000Z'),
   },
   {
     id: '7',
     title: 'FNAF',
-    description: 'Survive five nights at Freddy Fazbear\'s Pizzeria in this terrifying horror game.',
+    description: "Survive five nights at Freddy Fazbear's Pizzeria in this terrifying horror game.",
     imageUrl: 'https://iili.io/KBciryx.jpg',
     gameUrl: 'https://embeddr.rhw.one/embed#https://wellsousaaa.github.io/Five-Nights-at-Freddys-Web/',
     tags: ['horror', 'survival', 'point-and-click'],
     featured: false,
-    createdAt: new Date('2024-08-03T10:00:00.000Z'),
   },
   {
     id: '8',
@@ -70,7 +64,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://idle-breakout.neocities.org/',
     tags: ['idle', 'arcade', 'clicker', 'breakout'],
     featured: true,
-    createdAt: new Date('2024-08-04T10:00:00.000Z'),
   },
   {
     id: '9',
@@ -80,7 +73,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://cdn-factory.marketjs.com/en/drift-boss/index.html',
     tags: ['driving', 'drifting', 'skill', 'arcade'],
     featured: false,
-    createdAt: new Date('2024-08-05T10:00:00.000Z'),
   },
   {
     id: '10',
@@ -90,7 +82,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://mtsl.dk/csgo/',
     tags: ['clicker', 'simulation', 'idle'],
     featured: false,
-    createdAt: new Date('2024-08-06T10:00:00.000Z'),
   },
   {
     id: '11',
@@ -100,7 +91,6 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbxGM35J29NkO-2LYjxWj_cA9IUaaXypkUy-LqXyLRbGTz0R6lXmAEapz1STN1jlTIRavw/exec',
     tags: ['clicker', 'idle', 'casual', 'addictive'],
     featured: false,
-    createdAt: new Date('2024-08-07T10:00:00.000Z'),
   },
   {
     id: '12',
@@ -110,7 +100,6 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://azgames.io/game/slope/',
     tags: ['endless runner', '3d', 'skill', 'arcade'],
     featured: false,
-    createdAt: new Date('2024-08-08T10:00:00.000Z'),
   },
   {
     id: '13',
@@ -120,6 +109,5 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbywQzUuC23-1s-l12VbC1hQ31-5X8w2f6T1ltX-iB-qg-2y-bs4r0f_nB6_c6Q2A08t/exec',
     tags: ['sports', 'management', 'retro', 'football'],
     featured: true,
-    createdAt: new Date('2024-08-09T10:00:00.000Z'),
   }
 ];

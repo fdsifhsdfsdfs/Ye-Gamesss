@@ -10,7 +10,6 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://illegals-in-my-yard.trustmi.cl/',
     tags: ['web proxy', 'unblocker', 'privacy'],
     featured: true,
-    createdAt: new Date('2024-07-28T10:00:00.000Z'),
   },
   {
     id: '2',
@@ -20,7 +19,6 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://weather.meteorological.co/',
     tags: ['internet freedom', 'privacy', 'unblocker'],
     featured: false,
-    createdAt: new Date('2024-07-29T11:00:00.000Z'),
   },
   {
     id: '3',
@@ -30,7 +28,6 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://scienceworksheets.errorrail.dev/',
     tags: ['web proxy', 'unblocker', 'rammerhead'],
     featured: false,
-    createdAt: new Date('2024-07-30T12:00:00.000Z'),
   },
   {
     id: '4',
@@ -40,6 +37,5 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://donate.helping-hands.site/',
     tags: ['web proxy', 'unblocker', 'daydream'],
     featured: false,
-    createdAt: new Date('2024-07-31T13:00:00.000Z'),
   }
 ];
