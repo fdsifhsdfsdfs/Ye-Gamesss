@@ -24,7 +24,7 @@ export const proxys: Proxy[] = [
     id: '3',
     title: 'Rammerhead',
     description: 'A powerful web proxy for unrestricted browsing.',
-    imageUrl: 'https://i.imgur.com/lj1y4kn.png',
+    imageUrl: 'https://iili.io/KCqOd74.png',
     proxyUrl: 'https://scienceworksheets.errorrail.dev/',
     tags: ['web proxy', 'unblocker', 'rammerhead'],
     featured: false,
