@@ -13,6 +13,16 @@ export const games: Game[] = [
     createdAt: new Date('2024-07-26T10:00:00.000Z'),
   },
   {
+    id: '2',
+    title: '2048',
+    description: 'Combine tiles to reach the 2048 tile in this classic puzzle game.',
+    imageUrl: 'https://m.funkypotato.com/img/2048.png',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://play2048.co/',
+    tags: ['puzzle', 'math', 'strategy', 'addictive'],
+    featured: true,
+    createdAt: new Date('2024-07-26T11:00:00.000Z'),
+  },
+  {
     id: '3',
     title: 'Monkey Mart',
     description: 'Manage your own supermarket, stock shelves, and serve customers in this fun management game.',
