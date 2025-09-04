@@ -101,5 +101,15 @@ export const games: Game[] = [
     tags: ['clicker', 'idle', 'casual', 'addictive'],
     featured: false,
     createdAt: new Date('2024-08-07T10:00:00.000Z'),
+  },
+  {
+    id: '12',
+    title: 'Slope',
+    description: 'An endless runner game where you control a ball down a series of slopes.',
+    imageUrl: 'https://gamepluto.com/images/game/slope/slope-icon.jpg',
+    gameUrl: 'https://embeddr.rhw.one/embed#https://azgames.io/game/slope/',
+    tags: ['endless runner', '3d', 'skill', 'arcade'],
+    featured: false,
+    createdAt: new Date('2024-08-08T10:00:00.000Z'),
   }
 ];

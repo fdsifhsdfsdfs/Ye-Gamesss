@@ -88,6 +88,12 @@ const nextConfig: NextConfig = {
         hostname: 'iili.io',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'gamepluto.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
