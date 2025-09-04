@@ -175,6 +175,17 @@ export default function SettingsPage() {
           </div>
         </CardContent>
       </Card>
+      
+      <Card>
+        <CardHeader>
+          <CardTitle>About Ye Games</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            Ye Games is more than just a repository of unblocked games; it's a new frontier in online entertainment. We're redefining the experience by providing a curated, high-quality library of games and apps within a unique, customizable interface. Our platform is built on the idea that gaming should be accessible, stylish, and free from the clutter of traditional sites. With features like the retro CRT effect and personalized themes, we hope to offer a fresh and engaging environment for every player.
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 }
