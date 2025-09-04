@@ -19,6 +19,7 @@ export default function Home() {
     '8': 'idle breakout',
     '9': 'drift car',
     '10': 'case clicker',
+    '11': 'cookie clicker',
   };
 
   return (

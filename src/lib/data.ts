@@ -91,5 +91,15 @@ export const games: Game[] = [
     tags: ['clicker', 'simulation', 'idle'],
     featured: false,
     createdAt: new Date('2024-08-06T10:00:00.000Z'),
+  },
+  {
+    id: '11',
+    title: 'Cookie Clicker',
+    description: 'An addictive idle game where you click a cookie to make more cookies. Upgrade your production to create a cookie empire.',
+    imageUrl: 'https://i.imgur.com/DcTG9OS.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbxGM35J29NkO-2LYjxWj_cA9IUaaXypkUy-LqXyLRbGTz0R6lXmAEapz1STN1jlTIRavw/exec',
+    tags: ['clicker', 'idle', 'casual', 'addictive'],
+    featured: false,
+    createdAt: new Date('2024-08-07T10:00:00.000Z'),
   }
 ];

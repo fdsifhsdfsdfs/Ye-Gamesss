@@ -39,6 +39,7 @@ export default function GamesPage() {
     '8': 'idle breakout',
     '9': 'drift car',
     '10': 'case clicker',
+    '11': 'cookie clicker',
   };
 
   return (
