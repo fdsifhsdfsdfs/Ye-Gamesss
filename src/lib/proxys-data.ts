@@ -33,7 +33,7 @@ export const proxys: Proxy[] = [
     id: '4',
     title: 'DayDreamX',
     description: 'Experience the web with a new perspective.',
-    imageUrl: 'https://i.imgur.com/hMHqgrN.png',
+    imageUrl: 'https://iili.io/KCBXTg4.png',
     proxyUrl: 'https://donate.helping-hands.site/',
     tags: ['web proxy', 'unblocker', 'daydream'],
     featured: false,
