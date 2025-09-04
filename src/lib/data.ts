@@ -36,7 +36,7 @@ export const games: Game[] = [
     id: '5',
     title: 'Minecraft',
     description: 'A sandbox game where you can build anything you can imagine. Explore, survive, and create.',
-    imageUrl: 'https://static.wikia.nocookie.net/logopedia/images/f/f9/Minecraft_Bedrock_icon.svg/revision/latest/scale-to-width-down/250?cb=20230924021517',
+    imageUrl: 'https://gamepluto.com/wp-content/uploads/2023/12/minecraft-classic-logo.png',
     gameUrl: 'https://embeddr.rhw.one/embed#https://eaglercraft.com/mc/1.8.8',
     tags: ['sandbox', 'survival', 'building', 'adventure'],
     featured: true,
