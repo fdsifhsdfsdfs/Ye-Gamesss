@@ -121,5 +121,15 @@ export const games: Game[] = [
     tags: ['endless runner', '3d', 'skill', 'arcade'],
     featured: false,
     createdAt: new Date('2024-08-08T10:00:00.000Z'),
+  },
+  {
+    id: '13',
+    title: 'Retro Bowl',
+    description: 'Manage your own football team to victory in this retro-styled sports game.',
+    imageUrl: 'https://lh4.googleusercontent.com/proxy/U5LS3T3A-2Tqk422G2D_H7u3G3QXr3B2n4TqK5TfGg-2sVw=s384',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbywQzUuC23-1s-l12VbC1hQ31-5X8w2f6T1ltX-iB-qg-2y-bs4r0f_nB6_c6Q2A08t/exec',
+    tags: ['sports', 'management', 'retro', 'football'],
+    featured: true,
+    createdAt: new Date('2024-08-09T10:00:00.000Z'),
   }
 ];

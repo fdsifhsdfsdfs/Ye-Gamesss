@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
 
   // Image settings
   images: {
-    unoptimized: true,  // Disable image optimization for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
