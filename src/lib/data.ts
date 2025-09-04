@@ -87,7 +87,7 @@ export const games: Game[] = [
     id: '11',
     title: 'Cookie Clicker',
     description: 'An addictive idle game where you click a cookie to make more cookies. Upgrade your production to create a cookie empire.',
-    imageUrl: 'https://i.imgur.com/DcTG9OS.png',
+    imageUrl: 'https://iili.io/KCqz1Jp.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbxGM35J29NkO-2LYjxWj_cA9IUaaXypkUy-LqXyLRbGTz0R6lXmAEapz1STN1jlTIRavw/exec',
     tags: ['clicker', 'idle', 'casual', 'addictive'],
     featured: false,
