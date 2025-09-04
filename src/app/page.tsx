@@ -1,3 +1,4 @@
+
 import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
 import { games } from '@/lib/data';
@@ -19,6 +20,7 @@ export default function Home() {
     '9': 'drift car',
     '10': 'case clicker',
     '11': 'cookie clicker',
+    '12': 'endless runner',
     '13': 'retro football'
   };
 
