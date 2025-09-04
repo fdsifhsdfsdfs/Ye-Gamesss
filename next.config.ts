@@ -1,10 +1,6 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable static export
-  output: 'export',  // Static export mode
-  trailingSlash: true, // Required for static export with App Router
-
   // TypeScript and ESLint settings
   typescript: {
     ignoreBuildErrors: true,
