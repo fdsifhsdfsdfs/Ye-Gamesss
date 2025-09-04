@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -6,6 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from '@/components/theme-provider';
 import { HexColorPicker } from 'react-colorful';
+import { Button } from '@/components/ui/button';
 
 const hexToHsl = (hex: string): string => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -79,6 +81,7 @@ const hslStringToHex = (hsl: string): string => {
 export default function SettingsPage() {
   const { crtEffect, setCrtEffect, accentColor, setAccentColor } = useTheme();
   const [hexColor, setHexColor] = useState(() => hslStringToHex(accentColor));
+  const [showColorPicker, setShowColorPicker] = useState(false);
 
   const handleColorChange = (newColor: string) => {
     setHexColor(newColor);
@@ -106,15 +109,25 @@ export default function SettingsPage() {
               onCheckedChange={setCrtEffect}
             />
           </div>
-          <div className="space-y-2">
-            <Label>Accent Color</Label>
-            <div className="flex flex-col items-center gap-4">
-              <HexColorPicker color={hexColor} onChange={handleColorChange} className="w-full" />
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-md border" style={{ backgroundColor: hexColor }} />
-                <span className="font-mono text-sm">{hexColor}</span>
+
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <Label>Accent Color</Label>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="w-6 h-6 rounded-md border" style={{ backgroundColor: hexColor }} />
+                  <span className="font-mono text-sm">{hexColor}</span>
+                </div>
               </div>
+              <Button variant="outline" onClick={() => setShowColorPicker(!showColorPicker)}>
+                {showColorPicker ? 'Close' : 'Change'}
+              </Button>
             </div>
+            {showColorPicker && (
+              <div className="flex flex-col items-center gap-4 pt-4 border-t">
+                <HexColorPicker color={hexColor} onChange={handleColorChange} className="w-full" />
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
