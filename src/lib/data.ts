@@ -6,7 +6,7 @@ export const games: Game[] = [
     id: '1',
     title: 'Core Ball',
     description: 'A simple and addictive game about timing and precision. Can you attach all the balls to the core without them colliding?',
-    imageUrl: 'https://cdn-1.webcatalog.io/catalog/coreball/coreball-icon-filled-256.png?v=1720533850185',
+    imageUrl: 'https://iili.io/KCfpz0b.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbyob7HxkiW2e0yT22QRiejnA_alDdUkPnrNirnvCX1HYPriGPR6_GZ2i1RsglPytlFo/exec',
     tags: ['arcade', 'puzzle', 'skill', 'minimalist'],
     featured: true,
