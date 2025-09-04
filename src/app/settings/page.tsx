@@ -89,6 +89,36 @@ export default function SettingsPage() {
     setAccentColor(newHsl);
   };
   
+  const handleOpenInBlank = () => {
+    const newWindow = window.open('about:blank', '_blank');
+    if (newWindow) {
+      newWindow.document.write(`
+        <html style="height:100%;margin:0;padding:0;">
+          <head>
+            <title>Ye-Games</title>
+            <style>
+              body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                overflow: hidden;
+              }
+              iframe {
+                border: none;
+                width: 100%;
+                height: 100%;
+              }
+            </style>
+          </head>
+          <body>
+            <iframe src="${window.location.href}"></iframe>
+          </body>
+        </html>
+      `);
+      newWindow.document.close();
+    }
+  };
+
   return (
     <div className="space-y-8">
       <section>
@@ -128,6 +158,20 @@ export default function SettingsPage() {
                 <HexColorPicker color={hexColor} onChange={handleColorChange} className="w-full" />
               </div>
             )}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Advanced</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-muted-foreground">Open the current page in a sandboxed about:blank tab.</p>
+            <Button variant="outline" onClick={handleOpenInBlank}>
+              Open in About:Blank
+            </Button>
           </div>
         </CardContent>
       </Card>
