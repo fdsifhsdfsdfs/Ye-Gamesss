@@ -7,7 +7,7 @@ export const apps: App[] = [
     title: 'Sudo Flix',
     description: 'Watch your favorite movies and TV shows with a seamless streaming experience.',
     imageUrl: 'https://avatars.githubusercontent.com/u/191057509?s=200&v=4',
-    appUrl: 'https://pstream.mov',
+    appUrl: 'https://embeddr.rhw.one/embed#https://pstream.mov',
     tags: ['streaming', 'movies', 'tv shows', 'entertainment'],
     featured: true,
   },
