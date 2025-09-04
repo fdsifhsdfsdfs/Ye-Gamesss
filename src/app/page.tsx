@@ -10,17 +10,9 @@ export default function Home() {
 
   const gameCardHints: { [key: string]: string } = {
     '1': 'abstract circle',
-    '2': 'survival game',
     '3': 'monkey supermarket',
-    '4': 'truck jumping',
     '5': 'block world',
-    '6': 'car crash',
-    '7': 'scary animatronic',
     '8': 'idle breakout',
-    '9': 'drift car',
-    '10': 'case clicker',
-    '11': 'cookie clicker',
-    '12': 'endless runner',
     '13': 'retro football'
   };
 
