@@ -16,7 +16,7 @@ export const games: Game[] = [
     title: 'Monkey Mart',
     description: 'Manage your own supermarket, stock shelves, and serve customers in this fun management game.',
     imageUrl: 'https://play-lh.googleusercontent.com/rWReIdyvDaYJPeOxn7hbC0b-96ixGpQKM_EndiQa3SUME8TtI_rNUcI4qsw5teK9mqk',
-    gameUrl: 'https://script.google.com/macros/s/AKfycbw-vTP1vjZ3-Jk-hH3gIsg2B4sO3G5y3L2_oAYj4dsoL2df48yQ5i7d44-i21i_q4w/exec',
+    gameUrl: 'https://monkeymart-unblocked.com/game',
     tags: ['management', 'simulation', 'casual', 'strategy'],
     featured: true,
   },
