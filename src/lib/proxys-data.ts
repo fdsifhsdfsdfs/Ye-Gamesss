@@ -37,5 +37,14 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://donate.helping-hands.site/',
     tags: ['web proxy', 'unblocker', 'daydream'],
     featured: false,
+  },
+  {
+    id: '5',
+    title: 'Ye-Browser',
+    description: 'A new web proxy for browsing.',
+    imageUrl: 'https://iili.io/KxzlHog.png',
+    proxyUrl: 'https://violet-surfer.web.app/',
+    tags: ['web proxy', 'unblocker', 'new'],
+    featured: false,
   }
 ];
