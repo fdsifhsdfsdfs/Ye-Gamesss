@@ -3,6 +3,15 @@ import type { Proxy } from './types';
 
 export const proxys: Proxy[] = [
   {
+    id: '5',
+    title: 'Ye-Browser',
+    description: 'A new web proxy for browsing.',
+    imageUrl: 'https://iili.io/KxzlHog.png',
+    proxyUrl: 'https://violet-surfer.web.app/',
+    tags: ['web proxy', 'unblocker', 'new'],
+    featured: false,
+  },
+  {
     id: '1',
     title: 'Doge Unblocker',
     description: 'A web proxy to help you bypass restrictions and browse freely.',
@@ -36,15 +45,6 @@ export const proxys: Proxy[] = [
     imageUrl: 'https://iili.io/KCBXTg4.png',
     proxyUrl: 'https://donate.helping-hands.site/',
     tags: ['web proxy', 'unblocker', 'daydream'],
-    featured: false,
-  },
-  {
-    id: '5',
-    title: 'Ye-Browser',
-    description: 'A new web proxy for browsing.',
-    imageUrl: 'https://iili.io/KxzlHog.png',
-    proxyUrl: 'https://violet-surfer.web.app/',
-    tags: ['web proxy', 'unblocker', 'new'],
     featured: false,
   }
 ];
