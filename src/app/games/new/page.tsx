@@ -1,8 +1,27 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import { useTheme } from '@/components/theme-provider';
+import { useEffect } from 'react';
 
 export default function NewGamesPage() {
+  const { crtEffect } = useTheme();
+
+  useEffect(() => {
+    const originalCrtState = crtEffect && document.body.classList.contains('crt-effect');
+    if (originalCrtState) {
+      document.body.classList.remove('crt-effect');
+    }
+
+    return () => {
+      if (originalCrtState) {
+        document.body.classList.add('crt-effect');
+      }
+    };
+  }, [crtEffect]);
+
   return (
     <div className="fixed inset-0 top-14">
       <iframe
