@@ -46,5 +46,14 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://donate.helping-hands.site/',
     tags: ['web proxy', 'unblocker', 'daydream'],
     featured: false,
+  },
+  {
+    id: '6',
+    title: 'Truffled',
+    description: 'A new web proxy for browsing.',
+    imageUrl: 'https://iili.io/KATjvPj.png',
+    proxyUrl: 'https://god.churchandglobalaids.org/',
+    tags: ['web proxy', 'unblocker', 'new'],
+    featured: false,
   }
 ];
