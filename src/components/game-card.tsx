@@ -15,7 +15,7 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
   const handleClick = () => {
     const newWindow = window.open('about:blank', '_blank');
     if (newWindow) {
-      newWindow.document.write(`
+      const iframeContent = `
         <html style="height:100%;margin:0;padding:0;">
           <head>
             <title>${game.title}</title>
@@ -37,8 +37,10 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
             <iframe src="${game.gameUrl}"></iframe>
           </body>
         </html>
-      `);
-      newWindow.document.close();
+      `;
+      const blob = new Blob([iframeContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      newWindow.location.href = url;
     }
   };
 

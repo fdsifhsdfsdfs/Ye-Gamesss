@@ -12,10 +12,10 @@ interface AppCardProps {
 }
 
 export function AppCard({ app, dataAiHint }: AppCardProps) {
-    const handleClick = () => {
+  const handleClick = () => {
     const newWindow = window.open('about:blank', '_blank');
     if (newWindow) {
-      newWindow.document.write(`
+      const iframeContent = `
         <html style="height:100%;margin:0;padding:0;">
           <head>
             <title>${app.title}</title>
@@ -37,8 +37,10 @@ export function AppCard({ app, dataAiHint }: AppCardProps) {
             <iframe src="${app.appUrl}"></iframe>
           </body>
         </html>
-      `);
-      newWindow.document.close();
+      `;
+      const blob = new Blob([iframeContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      newWindow.location.href = url;
     }
   };
 

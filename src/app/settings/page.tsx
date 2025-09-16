@@ -92,7 +92,7 @@ export default function SettingsPage() {
   const handleOpenInBlank = () => {
     const newWindow = window.open('about:blank', '_blank');
     if (newWindow) {
-      newWindow.document.write(`
+      const iframeContent = `
         <html style="height:100%;margin:0;padding:0;">
           <head>
             <title>Ye-Games</title>
@@ -114,8 +114,10 @@ export default function SettingsPage() {
             <iframe src="${window.location.href}"></iframe>
           </body>
         </html>
-      `);
-      newWindow.document.close();
+      `;
+      const blob = new Blob([iframeContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      newWindow.location.href = url;
     }
   };
 
