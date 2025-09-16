@@ -38,9 +38,8 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
           </body>
         </html>
       `;
-      const blob = new Blob([iframeContent], { type: 'text/html' });
-      const url = URL.createObjectURL(blob);
-      newWindow.location.href = url;
+      newWindow.document.write(iframeContent);
+      newWindow.document.close();
     }
   };
 
