@@ -181,5 +181,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/moto_x3m_3/index.html',
     tags: ['racing', 'stunts', 'bike', 'physics'],
     featured: false,
+  },
+  {
+    id: '23',
+    title: 'Rooftop Snipers',
+    description: 'A chaotic physics-based shooting game. Try to knock your opponent off the roof.',
+    imageUrl: 'https://iili.io/KRNoRQn.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/rooftop_snipers/index.html',
+    tags: ['action', 'physics', '2-player', 'shooting'],
+    featured: false,
   }
 ];
