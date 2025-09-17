@@ -159,7 +159,7 @@ export const games: Game[] = [
     id: '20',
     title: 'Poly Track',
     description: 'A fast-paced, futuristic racing game where you navigate through a low-poly world.',
-    imageUrl: 'https://1games.io/data/image/game/polytrack/banner/poly-track.png',
+    imageUrl: 'https://iili.io/KRkKiJV.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbzuhv-wKflC3QgCI_d8xsy90ngRlqgKj-qfICMuzhimGuYwWXFI5tPWwwfjrYk-biJu/exec',
     tags: ['racing', '3d', 'endless-runner', 'skill'],
     featured: false,
