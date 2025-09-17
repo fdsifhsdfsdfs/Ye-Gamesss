@@ -136,5 +136,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/squid_game_2_mini_games/index.html',
     tags: ['action', 'survival', 'mini-games'],
     featured: false,
+  },
+  {
+    id: '18',
+    title: 'COD Zombies Portable',
+    description: 'Survive waves of zombies in this portable version of the classic game mode.',
+    imageUrl: 'https://iili.io/KRwfzfp.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/cod_zombies_portable/index.html',
+    tags: ['action', 'survival', 'zombies', 'shooter'],
+    featured: false,
   }
 ];
