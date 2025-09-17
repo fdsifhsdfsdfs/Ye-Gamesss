@@ -19,5 +19,14 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://www.ohiohoihohioh.voidtickets.xyz/p.html',
     tags: ['web'],
     featured: false,
+  },
+  {
+    id: '3',
+    title: "Ajh's Vault V8",
+    description: 'A proxy to browse the web freely.',
+    imageUrl: 'https://iili.io/KRjQTu9.png',
+    proxyUrl: 'https://hehe.ajh.boats/',
+    tags: ['web'],
+    featured: false,
   }
 ];

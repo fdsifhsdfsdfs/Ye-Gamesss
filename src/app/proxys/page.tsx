@@ -31,8 +31,7 @@ export default function ProxysPage() {
   const proxyCardHints: { [key:string]: string } = {
     '1': 'space nebula',
     '2': 'anonymous browsing',
-    '3': 'rammerhead logo',
-    '4': 'privacy shield',
+    '3': 'ajh vault',
   };
 
   return (
