@@ -190,5 +190,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/rooftop_snipers/index.html',
     tags: ['action', 'physics', '2-player', 'shooting'],
     featured: false,
+  },
+  {
+    id: '24',
+    title: 'Snow Rider 3D',
+    description: 'Ride your sled down a snowy mountain, avoid obstacles, and collect gifts.',
+    imageUrl: 'https://iili.io/KRN0Zhb.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbw5Z-Ryg_JfIIDYH7pzzPKXlr2tN0HCw-tT_ZvxBGDPsDDY41ewPVneVeLzelfpnBab/exec',
+    tags: ['racing', '3d', 'winter', 'skill'],
+    featured: false,
   }
 ];
