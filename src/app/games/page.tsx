@@ -42,6 +42,7 @@ export default function GamesPage() {
     '12': 'slope',
     '20': 'future race',
     '21': 'rocket soccer',
+    '26': 'swat time',
   };
 
   return (
