@@ -145,5 +145,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/cod_zombies_portable/index.html',
     tags: ['action', 'survival', 'zombies', 'shooter'],
     featured: false,
+  },
+  {
+    id: '19',
+    title: 'Block Blast',
+    description: 'A challenging puzzle game where you fit blocks together to clear lines.',
+    imageUrl: 'https://iili.io/KRw7EJa.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/blocky_puzzle/index.html',
+    tags: ['puzzle', 'casual', 'strategy', 'block'],
+    featured: false,
   }
 ];
