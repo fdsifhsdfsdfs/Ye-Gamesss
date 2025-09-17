@@ -11,7 +11,6 @@ export default function Home() {
   const gameCardHints: { [key: string]: string } = {
     '1': 'abstract circle',
     '3': 'monkey supermarket',
-    '5': 'block world',
     '8': 'idle breakout',
   };
 

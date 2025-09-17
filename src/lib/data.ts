@@ -30,15 +30,6 @@ export const games: Game[] = [
     featured: false,
   },
   {
-    id: '5',
-    title: 'Minecraft',
-    description: 'A sandbox game where you can build anything you can imagine. Explore, survive, and create.',
-    imageUrl: 'https://iili.io/KCqB1El.png',
-    gameUrl: 'https://embeddr.rhw.one/embed#https://eaglercraft.com/mc/1.8.8',
-    tags: ['sandbox', 'survival', 'building', 'adventure'],
-    featured: true,
-  },
-  {
     id: '6',
     title: 'Car Crash',
     description: 'A realistic car crash simulator. Test the limits of destruction.',
