@@ -28,5 +28,14 @@ export const proxys: Proxy[] = [
     proxyUrl: 'https://hehe.ajh.boats/',
     tags: ['web'],
     featured: false,
+  },
+  {
+    id: '4',
+    title: 'BrunysIXLWork',
+    description: 'A proxy to browse the web freely.',
+    imageUrl: 'https://iili.io/KRjQyMb.png',
+    proxyUrl: 'https://brunysixlwork.web.app/',
+    tags: ['web'],
+    featured: false,
   }
 ];
