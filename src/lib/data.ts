@@ -117,7 +117,7 @@ export const games: Game[] = [
     imageUrl: 'https://iili.io/KRjlVl1.md.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbxJalyip_ETy_kolDAlSVxdcnLtn16P6gIoJ5kDwt1abHFX32SUJEOLCWU31veTffv2/exec',
     tags: ['puzzle', 'humor', 'casual', 'roblox'],
-    featured: false,
+    featured: true,
   },
   {
     id: '16',
