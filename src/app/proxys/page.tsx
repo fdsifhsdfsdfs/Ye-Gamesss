@@ -32,6 +32,7 @@ export default function ProxysPage() {
     '1': 'space nebula',
     '2': 'anonymous browsing',
     '3': 'ajh vault',
+    '4': 'school laptop'
   };
 
   return (
