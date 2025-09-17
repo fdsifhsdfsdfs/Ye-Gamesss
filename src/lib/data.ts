@@ -199,5 +199,14 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbw5Z-Ryg_JfIIDYH7pzzPKXlr2tN0HCw-tT_ZvxBGDPsDDY41ewPVneVeLzelfpnBab/exec',
     tags: ['racing', '3d', 'winter', 'skill'],
     featured: false,
+  },
+  {
+    id: '25',
+    title: 'Retro Bowl',
+    description: 'Live out your dream as an NFL quarterback in this retro-style football game. Manage your team, call the plays, and lead them to victory.',
+    imageUrl: 'https://iili.io/KRNN4e4.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/retro_bowl/index.html',
+    tags: ['sports', 'football', 'retro', 'strategy'],
+    featured: false,
   }
 ];
