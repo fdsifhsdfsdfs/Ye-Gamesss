@@ -113,7 +113,7 @@ export const games: Game[] = [
   {
     id: '15',
     title: 'Steal a Brainrot',
-    description: 'A humorous game about internet culture.',
+    description: 'Steal a Brainrot is a Roblox game where players steal and collect quirky meme-like characters while protecting their own from being taken.',
     imageUrl: 'https://iili.io/KRjlVl1.md.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbxJalyip_ETy_kolDAlSVxdcnLtn16P6gIoJ5kDwt1abHFX32SUJEOLCWU31veTffv2/exec',
     tags: ['puzzle', 'humor', 'casual'],
