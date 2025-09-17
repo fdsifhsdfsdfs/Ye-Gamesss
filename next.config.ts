@@ -114,6 +114,12 @@ const nextConfig: NextConfig = {
         hostname: 'm.media-amazon.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.poki-cdn.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
