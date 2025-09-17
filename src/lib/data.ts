@@ -168,7 +168,7 @@ export const games: Game[] = [
     id: '21',
     title: 'Rocket Soccer Derby',
     description: 'Combine soccer with rocket-powered cars in this high-octane multiplayer game.',
-    imageUrl: 'https://m.media-amazon.com/images/I/81lEWQfx25L.png',
+    imageUrl: 'https://iili.io/KRkqE6G.png',
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/rocket_soccer_derby/index.html',
     tags: ['sports', 'driving', 'multiplayer', 'action'],
     featured: false,
