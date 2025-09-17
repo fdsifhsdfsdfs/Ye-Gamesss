@@ -116,7 +116,7 @@ export const games: Game[] = [
     description: 'Steal a Brainrot is a Roblox game where players steal and collect quirky meme-like characters while protecting their own from being taken.',
     imageUrl: 'https://iili.io/KRjlVl1.md.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbxJalyip_ETy_kolDAlSVxdcnLtn16P6gIoJ5kDwt1abHFX32SUJEOLCWU31veTffv2/exec',
-    tags: ['puzzle', 'humor', 'casual'],
+    tags: ['puzzle', 'humor', 'casual', 'roblox'],
     featured: false,
   },
   {
@@ -125,7 +125,7 @@ export const games: Game[] = [
     description: 'Cultivate your own virtual garden, plant seeds, water them, and watch them grow into beautiful flowers and plants.',
     imageUrl: 'https://iili.io/KRjVNbn.png',
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/steal_a_brainrot/index.html',
-    tags: ['simulation', 'gardening', 'casual', 'relaxing'],
+    tags: ['simulation', 'gardening', 'casual', 'relaxing', 'roblox'],
     featured: false,
   }
 ];
