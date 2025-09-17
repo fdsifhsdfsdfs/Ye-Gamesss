@@ -91,5 +91,14 @@ export const games: Game[] = [
     gameUrl: 'https://embeddr.rhw.one/embed#https://azgames.io/game/slope/',
     tags: ['endless runner', '3d', 'skill', 'arcade'],
     featured: false,
+  },
+  {
+    id: '13',
+    title: 'Clash Royale',
+    description: 'A real-time, head-to-head battle game set in the Clash Universe.',
+    imageUrl: 'https://iili.io/KRjdpft.png',
+    gameUrl: 'https://art.fullsusmtb.org/html/clash_royale/',
+    tags: ['strategy', 'real-time', 'card game', 'multiplayer'],
+    featured: false,
   }
 ];
