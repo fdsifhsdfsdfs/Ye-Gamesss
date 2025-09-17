@@ -100,5 +100,14 @@ export const games: Game[] = [
     gameUrl: 'https://art.fullsusmtb.org/html/clash_royale/',
     tags: ['strategy', 'real-time', 'card game', 'multiplayer'],
     featured: false,
+  },
+  {
+    id: '14',
+    title: 'Minecraft',
+    description: 'A sandbox game about placing blocks and going on adventures.',
+    imageUrl: 'https://iili.io/KBlwLVI.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/minecraft/',
+    tags: ['sandbox', 'survival', 'building', 'open-world'],
+    featured: false,
   }
 ];
