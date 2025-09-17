@@ -88,7 +88,7 @@ export const games: Game[] = [
     title: 'Slope',
     description: 'An endless runner game where you control a ball down a series of slopes.',
     imageUrl: 'https://iili.io/KCq7Xyv.png',
-    gameUrl: 'https://embeddr.rhw.one/embed#https://azgames.io/game/slope/',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/slope/index.html',
     tags: ['endless runner', '3d', 'skill', 'arcade'],
     featured: false,
   },
