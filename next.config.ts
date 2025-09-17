@@ -96,6 +96,12 @@ const nextConfig: NextConfig = {
         hostname: 'gamepluto.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'a.silvergames.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

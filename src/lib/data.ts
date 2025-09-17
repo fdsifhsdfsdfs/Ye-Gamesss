@@ -127,5 +127,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/steal_a_brainrot/index.html',
     tags: ['simulation', 'gardening', 'casual', 'relaxing', 'roblox'],
     featured: false,
+  },
+  {
+    id: '17',
+    title: 'Squid Games',
+    description: 'Survive a series of deadly mini-games inspired by the popular show.',
+    imageUrl: 'https://a.silvergames.com/j/b/squid-game-mini-games-online.jpg',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/squid_game_2_mini_games/index.html',
+    tags: ['action', 'survival', 'mini-games'],
+    featured: false,
   }
 ];
