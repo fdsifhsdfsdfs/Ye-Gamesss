@@ -109,5 +109,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/minecraft/',
     tags: ['sandbox', 'survival', 'building', 'open-world'],
     featured: false,
+  },
+  {
+    id: '15',
+    title: 'Steal a Brainrot',
+    description: 'A humorous game about internet culture.',
+    imageUrl: 'https://iili.io/KRjlVl1.md.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbxJalyip_ETy_kolDAlSVxdcnLtn16P6gIoJ5kDwt1abHFX32SUJEOLCWU31veTffv2/exec',
+    tags: ['puzzle', 'humor', 'casual'],
+    featured: false,
   }
 ];
