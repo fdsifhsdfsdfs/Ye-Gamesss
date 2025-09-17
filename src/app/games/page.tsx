@@ -1,13 +1,11 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import Link from 'next/link';
 import { GameCard } from '@/components/game-card';
 import { Input } from '@/components/ui/input';
 import { games } from '@/lib/data';
-import { Search, ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
 
 export default function GamesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -46,16 +44,9 @@ export default function GamesPage() {
 
   return (
     <div className="space-y-8">
-      <section className="flex justify-between items-center">
-        <div>
-          <h1 className="font-headline text-4xl font-bold tracking-tighter mb-2">Game Library</h1>
-          <p className="text-muted-foreground">Search and filter through our entire collection of games.</p>
-        </div>
-        <Button asChild>
-          <Link href="/games/new">
-            New Games Page <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+      <section>
+        <h1 className="font-headline text-4xl font-bold tracking-tighter mb-2">Game Library</h1>
+        <p className="text-muted-foreground">Search and filter through our entire collection of games.</p>
       </section>
 
       <div className="flex flex-col md:flex-row gap-4">
