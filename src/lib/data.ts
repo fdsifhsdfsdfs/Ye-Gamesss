@@ -132,7 +132,7 @@ export const games: Game[] = [
     id: '17',
     title: 'Squid Games',
     description: 'Survive a series of deadly mini-games inspired by the popular show.',
-    imageUrl: 'https://a.silvergames.com/j/b/squid-game-mini-games-online.jpg',
+    imageUrl: 'https://iili.io/KRkKTog.png',
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/squid_game_2_mini_games/index.html',
     tags: ['action', 'survival', 'mini-games'],
     featured: false,
