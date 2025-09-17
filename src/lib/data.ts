@@ -61,7 +61,7 @@ export const games: Game[] = [
     title: 'Drift Boss',
     description: 'Show off your driving skills by drifting through tight corners.',
     imageUrl: 'https://iili.io/KBlF5Xt.jpg',
-    gameUrl: 'https://embeddr.rhw.one/embed#https://cdn-factory.marketjs.com/en/drift-boss/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwAOi2tPbjzeWDkigfZMIPEGubYxz2la_qjxJyydNZyjwgbqsv9mv05g7tdmLHdvdaw/exec',
     tags: ['driving', 'drifting', 'skill', 'arcade'],
     featured: false,
   },
