@@ -208,5 +208,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/retro_bowl/index.html',
     tags: ['sports', 'football', 'retro', 'strategy'],
     featured: false,
+  },
+  {
+    id: '26',
+    title: 'Time Shooter 3 SWAT',
+    description: 'A tactical shooter where time only moves when you do. Plan your moves carefully to take down enemies.',
+    imageUrl: 'https://iili.io/KROzw9R.jpg',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/time_shooter_swat/index.html',
+    tags: ['action', 'shooter', 'strategy', 'time-bending'],
+    featured: false,
   }
 ];
