@@ -108,6 +108,12 @@ const nextConfig: NextConfig = {
         hostname: '1games.io',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

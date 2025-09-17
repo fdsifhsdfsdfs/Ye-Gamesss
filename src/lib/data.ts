@@ -163,5 +163,14 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbzuhv-wKflC3QgCI_d8xsy90ngRlqgKj-qfICMuzhimGuYwWXFI5tPWwwfjrYk-biJu/exec',
     tags: ['racing', '3d', 'endless-runner', 'skill'],
     featured: false,
+  },
+  {
+    id: '21',
+    title: 'Rocket Soccer Derby',
+    description: 'Combine soccer with rocket-powered cars in this high-octane multiplayer game.',
+    imageUrl: 'https://m.media-amazon.com/images/I/81lEWQfx25L.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/rocket_soccer_derby/index.html',
+    tags: ['sports', 'driving', 'multiplayer', 'action'],
+    featured: false,
   }
 ];

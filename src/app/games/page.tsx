@@ -41,6 +41,7 @@ export default function GamesPage() {
     '11': 'cookie clicker',
     '12': 'slope',
     '20': 'future race',
+    '21': 'rocket soccer',
   };
 
   return (
