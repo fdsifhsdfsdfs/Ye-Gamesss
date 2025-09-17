@@ -8,16 +8,6 @@ export interface Game {
   featured?: boolean;
 }
 
-export interface App {
-  id: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  appUrl: string;
-  tags: string[];
-  featured?: boolean;
-}
-
 export interface Proxy {
   id: string;
   title: string;
