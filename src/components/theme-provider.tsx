@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 
 type ThemeContextType = {
   crtEffect: boolean;
@@ -15,6 +16,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [crtEffect, setCrtEffectState] = useState(true);
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
   const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
@@ -30,10 +32,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (isMounted) {
-      document.body.classList.toggle('crt-effect', crtEffect);
+      const isAiPage = pathname === '/ai';
+      document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
       localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
     }
-  }, [crtEffect, isMounted]);
+  }, [crtEffect, isMounted, pathname]);
 
   useEffect(() => {
     if (isMounted) {
