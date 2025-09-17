@@ -118,5 +118,14 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbxJalyip_ETy_kolDAlSVxdcnLtn16P6gIoJ5kDwt1abHFX32SUJEOLCWU31veTffv2/exec',
     tags: ['puzzle', 'humor', 'casual'],
     featured: false,
+  },
+  {
+    id: '16',
+    title: 'Grow a Garden',
+    description: 'Cultivate your own virtual garden, plant seeds, water them, and watch them grow into beautiful flowers and plants.',
+    imageUrl: 'https://iili.io/KRjVNbn.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/steal_a_brainrot/index.html',
+    tags: ['simulation', 'gardening', 'casual', 'relaxing'],
+    featured: false,
   }
 ];
