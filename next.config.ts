@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Enforce the standalone output mode for server-based deployments.
+  output: 'standalone',
+
   // TypeScript and ESLint settings
   typescript: {
     ignoreBuildErrors: true,
@@ -11,6 +14,8 @@ const nextConfig: NextConfig = {
 
   // Image settings
   images: {
+    // Disable server-side image optimization as a safety measure during debugging.
+    unoptimized: true, 
     remotePatterns: [
       {
         protocol: 'https',
