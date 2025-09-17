@@ -32,7 +32,6 @@ export default function GamesPage() {
     '1': 'abstract circle',
     '3': 'monkey supermarket',
     '4': 'truck jumping',
-    '5': 'block world',
     '6': 'car crash',
     '7': 'scary animatronic',
     '8': 'idle breakout',
