@@ -102,6 +102,12 @@ const nextConfig: NextConfig = {
         hostname: 'a.silvergames.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '1games.io',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
