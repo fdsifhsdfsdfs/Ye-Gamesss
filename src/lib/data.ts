@@ -108,7 +108,7 @@ export const games: Game[] = [
     imageUrl: 'https://iili.io/KRjVNbn.png',
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/grow_a_garden/index.html',
     tags: ['simulation', 'gardening', 'casual', 'relaxing', 'roblox'],
-    featured: false,
+    featured: true,
   },
   {
     id: '17',
@@ -327,3 +327,5 @@ export const games: Game[] = [
     featured: false,
   }
 ];
+
+    

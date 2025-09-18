@@ -12,6 +12,7 @@ export default function Home() {
     '1': 'abstract circle',
     '3': 'monkey supermarket',
     '15': 'roblox character',
+    '16': 'virtual garden',
   };
 
   return (
@@ -43,3 +44,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
