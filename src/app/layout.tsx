@@ -3,7 +3,7 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Providers } from '@/components/providers';
 
 export const metadata: Metadata = {
   title: 'Ye-Games',
@@ -23,7 +23,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-background text-foreground font-body antialiased">
-        <ThemeProvider>
+        <Providers>
           <div id="app-container" className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 container mx-auto px-4 py-8">
@@ -31,7 +31,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-        </ThemeProvider>
+        </Providers>
         <Toaster />
       </body>
     </html>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -21,7 +20,7 @@ type ThemeContextType = {
   setCrtEffect: (enabled: boolean) => void;
   accentColor: string;
   setAccentColor: (color: string) => void;
-  hexColor: string; 
+  hexColor: string;
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -40,7 +39,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (storedColor) {
       setAccentColorState(storedColor);
       const [h, s, l] = storedColor.split(' ').map(val => parseInt(val.replace('%', '')));
-      setHexColor(hslToHex(h, s, l));
+      if (!isNaN(h) && !isNaN(s) && !isNaN(l)) {
+        setHexColor(hslToHex(h, s, l));
+      }
     }
   }, []);
 
@@ -55,8 +56,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('accentColor', accentColor);
     
     const [h, s, l] = accentColor.split(' ').map(val => parseInt(val.replace('%', '')));
-    setHexColor(hslToHex(h, s, l));
-
+    if (!isNaN(h) && !isNaN(s) && !isNaN(l)) {
+      setHexColor(hslToHex(h, s, l));
+    }
   }, [accentColor]);
 
 
