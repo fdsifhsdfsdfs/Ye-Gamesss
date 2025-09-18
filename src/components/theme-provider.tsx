@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { ThemeProvider as NextThemesProvider, useTheme as useNextTheme } from 'next-themes';
+import type { ThemeProviderProps } from 'next-themes/dist/types';
 
 const hslToHex = (h: number, s: number, l: number): string => {
   l /= 100;
@@ -91,7 +92,7 @@ function CustomThemeProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function ThemeProvider({ children, ...props }: React.ComponentProps<typeof NextThemesProvider>) {
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return (
     <NextThemesProvider {...props}>
       <CustomThemeProvider>{children}</CustomThemeProvider>
