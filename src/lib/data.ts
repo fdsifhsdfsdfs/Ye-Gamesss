@@ -106,7 +106,7 @@ export const games: Game[] = [
     title: 'Grow a Garden',
     description: 'Cultivate your own virtual garden, plant seeds, water them, and watch them grow into beautiful flowers and plants.',
     imageUrl: 'https://iili.io/KRjVNbn.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/steal_a_brainrot/index.html',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/grow_a_garden/index.html',
     tags: ['simulation', 'gardening', 'casual', 'relaxing', 'roblox'],
     featured: false,
   },
