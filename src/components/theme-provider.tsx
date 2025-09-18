@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { ThemeProvider as NextThemesProvider, useTheme as useNextTheme } from 'next-themes';
 
 const hslToHex = (h: number, s: number, l: number): string => {
   l /= 100;
@@ -15,7 +16,7 @@ const hslToHex = (h: number, s: number, l: number): string => {
   return `#${f(0)}${f(8)}${f(4)}`;
 };
 
-type ThemeContextType = {
+type CustomThemeContextType = {
   crtEffect: boolean;
   setCrtEffect: (enabled: boolean) => void;
   accentColor: string;
@@ -23,9 +24,9 @@ type ThemeContextType = {
   hexColor: string;
 };
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const CustomThemeContext = createContext<CustomThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+function CustomThemeProvider({ children }: { children: ReactNode }) {
   const [crtEffect, setCrtEffectState] = useState(true);
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
   const [hexColor, setHexColor] = useState('#4f00ff');
@@ -50,14 +51,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (isMounted) {
       localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
-      if (crtEffect) {
-        document.body.classList.add('crt-effect');
-      } else {
-        document.body.classList.remove('crt-effect');
+      const appContainer = document.getElementById('app-container');
+      if (appContainer) {
+        if (crtEffect) {
+          appContainer.classList.add('crt-effect');
+        } else {
+          appContainer.classList.remove('crt-effect');
+        }
       }
     }
   }, [crtEffect, isMounted]);
-
+  
   useEffect(() => {
     if (isMounted) {
       document.documentElement.style.setProperty('--primary', accentColor);
@@ -79,22 +83,29 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const setAccentColor = (color: string) => {
     setAccentColorState(color);
   };
-  
-  if (!isMounted) {
-    return null;
-  }
 
   return (
-    <ThemeContext.Provider value={{ crtEffect, setCrtEffect, accentColor, setAccentColor, hexColor }}>
+    <CustomThemeContext.Provider value={{ crtEffect, setCrtEffect, accentColor, setAccentColor, hexColor }}>
       {children}
-    </ThemeContext.Provider>
+    </CustomThemeContext.Provider>
+  );
+}
+
+export function ThemeProvider({ children, ...props }: React.ComponentProps<typeof NextThemesProvider>) {
+  return (
+    <NextThemesProvider {...props}>
+      <CustomThemeProvider>{children}</CustomThemeProvider>
+    </NextThemesProvider>
   );
 }
 
 export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
+  const nextThemeContext = useNextTheme();
+  const customThemeContext = useContext(CustomThemeContext);
+
+  if (customThemeContext === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
-  return context;
+
+  return { ...nextThemeContext, ...customThemeContext };
 }
