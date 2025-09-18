@@ -16,11 +16,9 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [crtEffect, setCrtEffectState] = useState(true);
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
-  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    setIsMounted(true);
     const storedCrt = localStorage.getItem('crtEffect');
     if (storedCrt !== null) {
       setCrtEffectState(JSON.parse(storedCrt));
@@ -32,26 +30,20 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (isMounted) {
-      localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
-    }
-  }, [crtEffect, isMounted]);
+    localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
+  }, [crtEffect]);
 
   useEffect(() => {
-    if (isMounted) {
-      const isAiPage = pathname === '/ai';
-      document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
-    }
-  }, [crtEffect, pathname, isMounted]);
+    const isAiPage = pathname === '/ai';
+    document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
+  }, [crtEffect, pathname]);
 
   useEffect(() => {
-    if (isMounted) {
-      document.documentElement.style.setProperty('--primary', accentColor);
-      document.documentElement.style.setProperty('--accent', accentColor);
-      document.documentElement.style.setProperty('--ring', accentColor);
-      localStorage.setItem('accentColor', accentColor);
-    }
-  }, [accentColor, isMounted]);
+    document.documentElement.style.setProperty('--primary', accentColor);
+    document.documentElement.style.setProperty('--accent', accentColor);
+    document.documentElement.style.setProperty('--ring', accentColor);
+    localStorage.setItem('accentColor', accentColor);
+  }, [accentColor]);
 
 
   const setCrtEffect = (enabled: boolean) => {
@@ -61,10 +53,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const setAccentColor = (color: string) => {
     setAccentColorState(color);
   };
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <ThemeContext.Provider value={{ crtEffect, setCrtEffect, accentColor, setAccentColor }}>
