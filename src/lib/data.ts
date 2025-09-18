@@ -316,5 +316,14 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/simply_up/index.html',
     tags: ['platformer', '3d', 'skill', 'difficult'],
     featured: false,
+  },
+  {
+    id: '40',
+    title: 'Subway Surfers',
+    description: 'Dash as fast as you can through the subway and dodge the oncoming trains. Help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog.',
+    imageUrl: 'https://iili.io/K7Jiql9.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/subway_surfers_barcelona/index.html',
+    tags: ['endless runner', 'action', '3d', 'skill'],
+    featured: false,
   }
 ];
