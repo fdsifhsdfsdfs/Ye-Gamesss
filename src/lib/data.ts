@@ -84,15 +84,6 @@ export const games: Game[] = [
     featured: false,
   },
   {
-    id: '13',
-    title: 'Clash Royale',
-    description: 'A real-time, head-to-head battle game set in the Clash Universe.',
-    imageUrl: 'https://iili.io/KRjdpft.png',
-    gameUrl: 'https://art.fullsusmtb.org/html/clash_royale/',
-    tags: ['strategy', 'real-time', 'card game', 'multiplayer'],
-    featured: false,
-  },
-  {
     id: '14',
     title: 'Minecraft',
     description: 'The classic sandbox game. Build, explore, and survive.',
@@ -207,6 +198,15 @@ export const games: Game[] = [
     imageUrl: 'https://iili.io/KROzw9R.jpg',
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/time_shooter_swat/index.html',
     tags: ['action', 'shooter', 'strategy', 'time-bending'],
+    featured: false,
+  },
+  {
+    id: '27',
+    title: 'Zombies Coming',
+    description: 'Survive the onslaught of the undead in this action-packed zombie shooter.',
+    imageUrl: 'https://iili.io/K7Hlon1.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbzFgyO_45-IB8xSm3aznm-U6NwkuCxr8guuZuCUNwr9kbyHXBGJFRRyNqKHNOwuHwGn/exec',
+    tags: ['action', 'shooter', 'zombies', 'survival'],
     featured: false,
   }
 ];
