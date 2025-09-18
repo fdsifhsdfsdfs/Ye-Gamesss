@@ -60,7 +60,7 @@ export const games: Game[] = [
     id: '10',
     title: 'CSGO Clicker',
     description: 'Click to open cases and collect rare items in this addictive clicking game.',
-    imageUrl: 'https://iili.io/KB02cX9.webp',
+    imageUrl: 'https://iili.io/K7JLNtf.png',
     gameUrl: 'https://script.google.com/macros/s/AKfycbwKKRujNfvv7u1c2DqAjTAe72Y0zN2BZGJPeZprhS7GpfvW1kN_MQs-_ACFOfJ_EBhO1w/exec',
     tags: ['clicker', 'simulation', 'idle'],
     featured: false,
