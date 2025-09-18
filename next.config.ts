@@ -21,7 +21,7 @@ const remoteHostnames = [
 ];
 
 const nextConfig = {
-  output: "standalone",
+  output: "export",
   typescript: {
     ignoreBuildErrors: true
   },
@@ -29,6 +29,7 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   images: {
+    unoptimized: true,
     remotePatterns: remoteHostnames.map((hostname) => ({
       protocol: "https",
       hostname,

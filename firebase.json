@@ -1,22 +1,11 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextjs-server"
-      }
-    ]
-  },
-  "functions": {
-    "source": ".next/standalone",
-    "runtime": "nodejs20",
-    "region": "us-central1"
+    "cleanUrls": true
   }
 }
