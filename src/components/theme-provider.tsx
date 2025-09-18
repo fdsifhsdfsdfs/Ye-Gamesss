@@ -1,3 +1,4 @@
+
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -32,11 +33,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (isMounted) {
-      const isAiPage = pathname === '/ai';
-      document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
       localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
     }
-  }, [crtEffect, isMounted, pathname]);
+  }, [crtEffect, isMounted]);
+
+  useEffect(() => {
+    if (isMounted) {
+      const isAiPage = pathname === '/ai';
+      document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
+    }
+  }, [crtEffect, pathname, isMounted]);
 
   useEffect(() => {
     if (isMounted) {

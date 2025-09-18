@@ -1,132 +1,40 @@
-import type { NextConfig } from 'next';
+// List of remote hostnames for images
+const remoteHostnames = [
+  "placehold.co",
+  "picsum.photos",
+  "cdn-1.webcatalog.io",
+  "thumbnails.gamenora.com",
+  "play-lh.googleusercontent.com",
+  "m.funkypotato.com",
+  "rocketgames.imgix.net",
+  "static.wikia.nocookie.net",
+  "avatars.githubusercontent.com",
+  "lh4.googleusercontent.com",
+  "i.imgur.com",
+  "www.inet-web.com",
+  "iili.io",
+  "gamepluto.com",
+  "a.silvergames.com",
+  "1games.io",
+  "m.media-amazon.com",
+  "img.poki-cdn.com"
+];
 
-const nextConfig: NextConfig = {
-  // Enforce the standalone output mode for server-based deployments.
-  output: 'standalone',
-
-  // TypeScript and ESLint settings
+const nextConfig = {
+  output: "standalone",
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
-
-  // Image settings
   images: {
-    // Disable server-side image optimization as a safety measure during debugging.
-    unoptimized: true, 
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn-1.webcatalog.io',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'thumbnails.gamenora.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'play-lh.googleusercontent.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'm.funkypotato.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'rocketgames.imgix.net',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'static.wikia.nocookie.net',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'lh4.googleusercontent.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'i.imgur.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.inet-web.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'iili.io',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'gamepluto.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'a.silvergames.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '1games.io',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'm.media-amazon.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'img.poki-cdn.com',
-        port: '',
-        pathname: '/**',
-      }
-    ],
-  },
+    remotePatterns: remoteHostnames.map((hostname) => ({
+      protocol: "https",
+      hostname,
+      pathname: "/**"
+    }))
+  }
 };
 
 export default nextConfig;
