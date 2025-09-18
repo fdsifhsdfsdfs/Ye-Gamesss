@@ -48,15 +48,6 @@ export const games: Game[] = [
     featured: false,
   },
   {
-    id: '8',
-    title: 'Idle Breakout',
-    description: 'Break blocks, earn money, and upgrade your balls in this addictive idle game.',
-    imageUrl: 'https://iili.io/KBcDYTG.png',
-    gameUrl: 'https://embeddr.rhw.one/embed#https://idle-breakout.neocities.org/',
-    tags: ['idle', 'arcade', 'clicker', 'breakout'],
-    featured: true,
-  },
-  {
     id: '9',
     title: 'Drift Boss',
     description: 'Show off your driving skills by drifting through tight corners.',
