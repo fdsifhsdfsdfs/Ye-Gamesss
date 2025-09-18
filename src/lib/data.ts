@@ -102,6 +102,15 @@ export const games: Game[] = [
     featured: false,
   },
   {
+    id: '14',
+    title: 'Minecraft',
+    description: 'The classic sandbox game. Build, explore, and survive.',
+    imageUrl: 'https://iili.io/KBcEnB2.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/minecraft_classic/index.html',
+    tags: ['sandbox', 'survival', 'building', 'adventure'],
+    featured: false,
+  },
+  {
     id: '15',
     title: 'Steal a Brainrot',
     description: 'Steal a Brainrot is a Roblox game where players steal and collect quirky meme-like characters while protecting their own from being taken.',
