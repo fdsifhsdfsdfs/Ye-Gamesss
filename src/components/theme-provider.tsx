@@ -2,7 +2,6 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
 
 const hslToHex = (h: number, s: number, l: number): string => {
   l /= 100;
@@ -31,7 +30,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [crtEffect, setCrtEffectState] = useState(true);
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
   const [hexColor, setHexColor] = useState('#4f00ff');
-  const pathname = usePathname();
 
   useEffect(() => {
     const storedCrt = localStorage.getItem('crtEffect');
@@ -49,11 +47,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
   }, [crtEffect]);
-  
-  useEffect(() => {
-    const isAiPage = pathname === '/ai';
-    document.body.classList.toggle('crt-effect', crtEffect && !isAiPage);
-  }, [crtEffect, pathname]);
 
   useEffect(() => {
     document.documentElement.style.setProperty('--primary', accentColor);
