@@ -1,9 +1,10 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
-import { Providers } from '@/components/providers';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Ye-Games',
@@ -23,15 +24,15 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-background text-foreground font-body antialiased">
-        <Providers>
-          <div id="app-container" className="relative flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1 container mx-auto px-4 py-8">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </Providers>
+        <ThemeProvider>
+            <div id="app-container" className="relative flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1 container mx-auto px-4 py-8">
+                {children}
+              </main>
+              <Footer />
+            </div>
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>

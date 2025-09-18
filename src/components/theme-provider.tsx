@@ -29,8 +29,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [crtEffect, setCrtEffectState] = useState(true);
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
   const [hexColor, setHexColor] = useState('#4f00ff');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const storedCrt = localStorage.getItem('crtEffect');
     if (storedCrt !== null) {
       setCrtEffectState(JSON.parse(storedCrt));
@@ -46,21 +48,29 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
-  }, [crtEffect]);
+    if (isMounted) {
+      localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
+      if (crtEffect) {
+        document.body.classList.add('crt-effect');
+      } else {
+        document.body.classList.remove('crt-effect');
+      }
+    }
+  }, [crtEffect, isMounted]);
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--primary', accentColor);
-    document.documentElement.style.setProperty('--accent', accentColor);
-    document.documentElement.style.setProperty('--ring', accentColor);
-    localStorage.setItem('accentColor', accentColor);
-    
-    const [h, s, l] = accentColor.split(' ').map(val => parseInt(val.replace('%', '')));
-    if (!isNaN(h) && !isNaN(s) && !isNaN(l)) {
-      setHexColor(hslToHex(h, s, l));
+    if (isMounted) {
+      document.documentElement.style.setProperty('--primary', accentColor);
+      document.documentElement.style.setProperty('--accent', accentColor);
+      document.documentElement.style.setProperty('--ring', accentColor);
+      localStorage.setItem('accentColor', accentColor);
+      
+      const [h, s, l] = accentColor.split(' ').map(val => parseInt(val.replace('%', '')));
+      if (!isNaN(h) && !isNaN(s) && !isNaN(l)) {
+        setHexColor(hslToHex(h, s, l));
+      }
     }
-  }, [accentColor]);
-
+  }, [accentColor, isMounted]);
 
   const setCrtEffect = (enabled: boolean) => {
     setCrtEffectState(enabled);
@@ -69,6 +79,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const setAccentColor = (color: string) => {
     setAccentColorState(color);
   };
+  
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider value={{ crtEffect, setCrtEffect, accentColor, setAccentColor, hexColor }}>
