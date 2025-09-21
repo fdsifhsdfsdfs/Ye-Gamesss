@@ -7,7 +7,7 @@ export const games: Game[] = [
     title: 'Core Ball',
     description: 'A simple and addictive game about timing and precision. Can you attach all the balls to the core without them colliding?',
     imageUrl: 'https://iili.io/KCqdtef.png',
-    gameUrl: 'https://script.google.com/macros/s/AKfycbwuWPuF8N5zZDqvwEqA35knRMPA6o3QtCnBYuf0kbWVtTA99viuRzJ6FkfhC5yedotu/exec',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyob7HxkiW2e0yT22QRiejnA_alDdUkPnrNirnvCX1HYPriGPR6_GZ2i1RsglPytlFo/exec',
     tags: ['arcade', 'puzzle', 'skill', 'minimalist'],
     featured: true,
   },
@@ -336,5 +336,7 @@ export const games: Game[] = [
     featured: false,
   }
 ];
+
+    
 
     
