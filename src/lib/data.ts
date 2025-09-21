@@ -325,6 +325,15 @@ export const games: Game[] = [
     gameUrl: 'https://maddox.page/basic-ruffle-player/html/subway_surfers_barcelona/index.html',
     tags: ['endless runner', 'action', '3d', 'skill'],
     featured: false,
+  },
+  {
+    id: '41',
+    title: 'Clash Royale',
+    description: 'Lead the Clash of Clans characters to victory in this epic real-time multiplayer game.',
+    imageUrl: 'https://iili.io/Kad2jjf.png',
+    gameUrl: 'https://maddox.page/basic-ruffle-player/html/clash_royale/index.html',
+    tags: ['multiplayer', 'strategy', 'card-game', 'real-time'],
+    featured: false,
   }
 ];
 

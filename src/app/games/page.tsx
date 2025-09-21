@@ -53,6 +53,7 @@ export default function GamesPage() {
     '24': 'snow sled',
     '25': 'retro football',
     '26': 'swat time',
+    '41': 'goblin king',
   };
 
   return (
