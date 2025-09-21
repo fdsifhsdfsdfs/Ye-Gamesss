@@ -48,6 +48,15 @@ export const games: Game[] = [
     featured: false,
   },
   {
+    id: '8',
+    title: 'Idle Breakout',
+    description: 'A modern twist on a classic. Break bricks, earn cash, and buy upgrades to break even more bricks.',
+    imageUrl: 'https://iili.io/KadzKX9.png',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwuWPuF8N5zZDqvwEqA35knRMPA6o3QtCnBYuf0kbWVtTA99viuRzJ6FkfhC5yedotu/exec',
+    tags: ['idle', 'arcade', 'clicker', 'breakout'],
+    featured: false,
+  },
+  {
     id: '9',
     title: 'Drift Boss',
     description: 'Show off your driving skills by drifting through tight corners.',
@@ -336,6 +345,8 @@ export const games: Game[] = [
     featured: false,
   }
 ];
+
+    
 
     
 
