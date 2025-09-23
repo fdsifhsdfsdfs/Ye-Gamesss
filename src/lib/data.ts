@@ -120,15 +120,6 @@ export const games: Game[] = [
     featured: true,
   },
   {
-    id: '17',
-    title: 'Squid Games',
-    description: 'Survive a series of deadly mini-games inspired by the popular show.',
-    imageUrl: 'https://iili.io/KRkKTog.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/squid_game_2_mini_games/index.html',
-    tags: ['action', 'survival', 'mini-games'],
-    featured: false,
-  },
-  {
     id: '18',
     title: 'COD Zombies Portable',
     description: 'Survive waves of zombies in this portable version of the classic game mode.',
@@ -228,30 +219,12 @@ export const games: Game[] = [
     featured: false,
   },
   {
-    id: '29',
-    title: 'CS 1.6',
-    description: 'The classic multiplayer first-person shooter. Play Counter-Strike 1.6 in your browser.',
-    imageUrl: 'https://iili.io/K7JWGn4.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/cs_online/index.html',
-    tags: ['action', 'shooter', 'multiplayer', 'classic'],
-    featured: false,
-  },
-  {
     id: '30',
     title: 'Happy Wheels',
     description: 'A bloody and hilarious physics-based game. Navigate deadly obstacle courses with unconventional characters.',
     imageUrl: 'https://iili.io/K7JX7iQ.png',
-    gameUrl: 'https://script.google.com/macros/s/AKfycbyfMPVIGx6dJPrYKeE9e4Erj949-dH28pWVRjdV1vgnoylpBV8af03JNLoz2MwAIBLECg/exec',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbbyfMPVIGx6dJPrYKeE9e4Erj949-dH28pWVRjdV1vgnoylpBV8af03JNLoz2MwAIBLECg/exec',
     tags: ['physics', 'action', 'humor', 'platformer'],
-    featured: false,
-  },
-  {
-    id: '31',
-    title: 'Infinite Craft',
-    description: 'A sandbox game about combining elements to create new discoveries, similar to Little Alchemy.',
-    imageUrl: 'https://iili.io/K7Jjn99.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/nova_craft/index.html',
-    tags: ['puzzle', 'crafting', 'sandbox', 'creativity'],
     featured: false,
   },
   {
@@ -316,33 +289,6 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbzldWJTTfMKpL3kwAhT9_8QgVggy4hWyfywpbcHtnnMkhyNaBsSiDtEl2GH7AoTY1WA/exec',
     tags: ['management', 'simulation', 'cooking', 'strategy'],
     featured: false,
-  },
-  {
-    id: '39',
-    title: 'Only Up',
-    description: 'A challenging 3D platformer where the only way is up. Climb a surreal world of objects to reach the top.',
-    imageUrl: 'https://iili.io/K7JUn94.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/simply_up/index.html',
-    tags: ['platformer', '3d', 'skill', 'difficult'],
-    featured: false,
-  },
-  {
-    id: '40',
-    title: 'Subway Surfers',
-    description: 'Dash as fast as you can through the subway and dodge the oncoming trains. Help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog.',
-    imageUrl: 'https://iili.io/K7Jiql9.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/subway_surfers_barcelona/index.html',
-    tags: ['endless runner', 'action', '3d', 'skill'],
-    featured: false,
-  },
-  {
-    id: '41',
-    title: 'Clash Royale',
-    description: 'Lead the Clash of Clans characters to victory in this epic real-time multiplayer game.',
-    imageUrl: 'https://iili.io/Kad2jjf.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/clash_royale/index.html',
-    tags: ['multiplayer', 'strategy', 'card-game', 'real-time'],
-    featured: false,
   }
 ];
 
@@ -353,6 +299,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
