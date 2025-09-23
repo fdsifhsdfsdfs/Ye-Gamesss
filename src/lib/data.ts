@@ -286,7 +286,7 @@ export const games: Game[] = [
     title: 'Survival King',
     description: 'Compete in a battle arena, race against opponents, and fight for the crown in this survival game.',
     imageUrl: 'https://iili.io/K7JOkDF.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/race_survival_arena_king/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyOsbO819x7gMy1E1ih7vuuOyD9rUA2IrIz0kluULJikUbYkwEcJgBbUTGtepr7Q1xT/exec',
     tags: ['action', 'survival', 'racing', 'arena'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
