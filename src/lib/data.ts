@@ -313,7 +313,7 @@ export const games: Game[] = [
     title: 'Papas Pizzeria',
     description: 'Manage a busy pizzeria, take orders, bake pizzas, and keep your customers happy in this classic restaurant management game.',
     imageUrl: 'https://iili.io/K7J8SmN.png',
-    gameUrl: 'https://www.coolmathgames.com/0-papas-pizzeria/play',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbzldWJTTfMKpL3kwAhT9_8QgVggy4hWyfywpbcHtnnMkhyNaBsSiDtEl2GH7AoTY1WA/exec',
     tags: ['management', 'simulation', 'cooking', 'strategy'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
