@@ -178,7 +178,7 @@ export const games: Game[] = [
     title: 'Rooftop Snipers',
     description: 'A chaotic physics-based shooting game. Try to knock your opponent off the roof.',
     imageUrl: 'https://iili.io/KRNoRQn.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/rooftop_snipers/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbxvum22sqM2wxEHW07x2x1XXn7JJkaZ_4Gz0UrEMWQL0w4ZuWblNga7UEdQtuaqifn4_g/exec',
     tags: ['action', 'physics', '2-player', 'shooting'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
