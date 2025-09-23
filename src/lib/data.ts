@@ -142,7 +142,7 @@ export const games: Game[] = [
     title: 'Block Blast',
     description: 'A challenging puzzle game where you fit blocks together to clear lines.',
     imageUrl: 'https://iili.io/KRw7EJa.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/blocky_puzzle/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyGdFrlZTdpnGbPI5jbOQ9175Rr1QJM0qrKIkfGaSklXCf76M9pTf0GOvDsifEpFNM8HA/exec',
     tags: ['puzzle', 'casual', 'strategy', 'block'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
