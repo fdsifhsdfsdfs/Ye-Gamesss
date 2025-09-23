@@ -133,7 +133,7 @@ export const games: Game[] = [
     title: 'COD Zombies Portable',
     description: 'Survive waves of zombies in this portable version of the classic game mode.',
     imageUrl: 'https://iili.io/KRwCPIe.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/cod_zombies_portable/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbw3nnJurKDIsGYeMAzpHQ-PXYSfQhe55bL2ViL4xy6gN0iqQZWjqWMgLmDKDj8OnHqJMw/exec',
     tags: ['action', 'survival', 'zombies', 'shooter'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
