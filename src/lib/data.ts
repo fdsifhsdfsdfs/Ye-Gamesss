@@ -169,7 +169,7 @@ export const games: Game[] = [
     title: 'Moto X3M',
     description: 'A fun and challenging bike racing game with crazy stunts and obstacles.',
     imageUrl: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/moto_x3m_3/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyxtVplmyFdm-D9HLApYxyfLAIgIdmzGi1fYfuLstsDebGEMItwxCXoz8nYwtCc1dQwRw/exec',
     tags: ['racing', 'stunts', 'bike', 'physics'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
