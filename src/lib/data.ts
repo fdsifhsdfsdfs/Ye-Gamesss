@@ -268,7 +268,7 @@ export const games: Game[] = [
     title: 'OvO',
     description: 'A fast-paced platformer where you use parkour skills to navigate challenging levels.',
     imageUrl: 'https://iili.io/K7Jwi1R.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/ovo/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbz_AoJl43GNpwP5-LvZ9oDzEykxisdCXuLJZlHe_GHl8KuDWLJmaEGfOijDSQoHd1Yitg/exec',
     tags: ['platformer', 'parkour', 'skill', 'fast-paced'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
