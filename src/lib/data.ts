@@ -223,7 +223,7 @@ export const games: Game[] = [
     title: 'Bitlife',
     description: 'A life simulation game where you can become anyone and live any life.',
     imageUrl: 'https://iili.io/K7J0Y8J.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/bitlife/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbzZLg75kF-h-Yxkv52eTtezhRUf6zucFx50EcxtUjbzHe2kyILqzITGvvYP5PeSk93F/exec',
     tags: ['simulation', 'life', 'text-based'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
