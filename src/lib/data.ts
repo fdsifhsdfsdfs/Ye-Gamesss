@@ -97,7 +97,7 @@ export const games: Game[] = [
     title: 'Minecraft',
     description: 'The classic sandbox game. Build, explore, and survive.',
     imageUrl: 'https://iili.io/K79DUzJ.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/minecraft/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyKbsXBbhn2rjG26VwYrWJ8rhiegzUjargXS91oNZ_tnODni3m6GCcC1TnPQb68qmod/exec',
     tags: ['sandbox', 'survival', 'building', 'adventure'],
     featured: false,
   },
@@ -353,4 +353,5 @@ export const games: Game[] = [
     
 
     
+
 
