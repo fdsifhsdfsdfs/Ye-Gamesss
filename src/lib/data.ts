@@ -241,7 +241,7 @@ export const games: Game[] = [
     title: 'Happy Wheels',
     description: 'A bloody and hilarious physics-based game. Navigate deadly obstacle courses with unconventional characters.',
     imageUrl: 'https://iili.io/K7JX7iQ.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/happy_wheels/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbyfMPVIGx6dJPrYKeE9e4Erj949-dH28pWVRjdV1vgnoylpBV8af03JNLoz2MwAIBLECg/exec',
     tags: ['physics', 'action', 'humor', 'platformer'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
