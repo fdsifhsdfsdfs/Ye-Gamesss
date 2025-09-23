@@ -277,7 +277,7 @@ export const games: Game[] = [
     title: 'Slowroads',
     description: 'A relaxing driving game focused on the journey, not the destination. Enjoy a peaceful, endless drive.',
     imageUrl: 'https://iili.io/K7JO9u1.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/slowroadsio/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbxepFVFpMcxKUfm7-FeVGtnjYji6IxjUcNJjc3zt7J_RxdwNN3Q1i7YMfMM7lUUCKu3ew/exec',
     tags: ['driving', 'simulation', 'relaxing', 'endless'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
