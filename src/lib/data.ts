@@ -259,7 +259,7 @@ export const games: Game[] = [
     title: 'Basketball Legends',
     description: 'Play as your favorite basketball stars in this 2-player sports game.',
     imageUrl: 'https://iili.io/K7JwoUN.png',
-    gameUrl: 'https://madalin-stunt-cars-2.com/basketball-legends',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwrfhvN29XigsSiR4f-AkCy8MoXNZra7HeQKNC2OoTdZem3t4cQYBsDxYndWX1XWLMVMQ/exec',
     tags: ['sports', 'basketball', '2-player'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
