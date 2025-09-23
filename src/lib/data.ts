@@ -295,7 +295,7 @@ export const games: Game[] = [
     title: 'The Impossible Quiz',
     description: 'A famously difficult quiz that tests your logic and outside-the-box thinking with tricky questions.',
     imageUrl: 'https://iili.io/K7JkVYQ.png',
-    gameUrl: 'https://maddox.page/basic-ruffle-player/html/theimpossiblequiz/index.html',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwLKo8-7r2iaT3OVNYZBQMNmyLmIAp8mF63HA5f4CZajt1KGD1R7SREWgdDFpZzwrw7/exec',
     tags: ['puzzle', 'quiz', 'humor', 'difficult'],
     featured: false,
   },
@@ -353,6 +353,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
