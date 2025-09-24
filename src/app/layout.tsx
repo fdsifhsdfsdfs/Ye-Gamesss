@@ -23,8 +23,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-E7GCD3WKMC"></Script>
-        <Script id="google-analytics">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7GCD3WKMC"></script>
+        <script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -32,7 +32,7 @@ export default function RootLayout({
 
             gtag('config', 'G-E7GCD3WKMC');
           `}
-        </Script>
+        </script>
       </head>
       <body className="bg-background text-foreground font-body antialiased">
         <ThemeProvider
