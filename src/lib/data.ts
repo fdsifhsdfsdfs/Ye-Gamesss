@@ -268,7 +268,7 @@ export const games: Game[] = [
     title: 'The Impossible Quiz',
     description: 'A famously difficult quiz that tests your logic and outside-the-box thinking with tricky questions.',
     imageUrl: 'https://iili.io/K7JkVYQ.png',
-    gameUrl: 'https://r2.maddox.page/html/theimpossiblequiz/',
+    gameUrl: 'https://script.google.com/macros/s/AKfycbwLKo8-7r2iaT3OVNYZBQMNmyLmIAp8mF63HA5f4CZajt1KGD1R7SREWgdDFpZzwrw7/exec',
     tags: ['puzzle', 'quiz', 'humor', 'difficult'],
     featured: false,
   },
@@ -379,6 +379,15 @@ export const games: Game[] = [
     gameUrl: 'https://r2.maddox.page/html/gun_spin/',
     tags: ['arcade', 'skill', 'physics', 'endless'],
     featured: false,
+  },
+  {
+    id: '49',
+    title: 'Papas Burgeria',
+    description: 'Take charge of Papas Burgeria, where you will grill burgers, add toppings, and serve a lineup of wacky customers.',
+    imageUrl: 'https://iili.io/Kljo30l.png',
+    gameUrl: 'https://r2.maddox.page/html/papasburgeria/',
+    tags: ['management', 'simulation', 'cooking', 'papas'],
+    featured: false,
   }
 ];
 
@@ -389,6 +398,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
