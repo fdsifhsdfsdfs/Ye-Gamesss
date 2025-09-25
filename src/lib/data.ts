@@ -259,7 +259,7 @@ export const games: Game[] = [
     title: 'Survival King',
     description: 'Compete in a battle arena, race against opponents, and fight for the crown in this survival game.',
     imageUrl: 'https://iili.io/K7JOkDF.png',
-    gameUrl: 'https://script.google.com/macros/s/AKfycbyOsbO819x7gMy1E1ih7vuuOyD9rUA2IrIz0kluULJikUbYkwEcJgBbUTGtepr7Q1xT/exec',
+    gameUrl: 'https://r2.maddox.page/html/race_survival_arena_king/',
     tags: ['action', 'survival', 'racing', 'arena'],
     featured: false,
   },
@@ -268,7 +268,7 @@ export const games: Game[] = [
     title: 'The Impossible Quiz',
     description: 'A famously difficult quiz that tests your logic and outside-the-box thinking with tricky questions.',
     imageUrl: 'https://iili.io/K7JkVYQ.png',
-    gameUrl: 'https://script.google.com/macros/s/AKfycbwLKo8-7r2iaT3OVNYZBQMNmyLmIAp8mF63HA5f4CZajt1KGD1R7SREWgdDFpZzwrw7/exec',
+    gameUrl: 'https://r2.maddox.page/html/theimpossiblequiz/',
     tags: ['puzzle', 'quiz', 'humor', 'difficult'],
     featured: false,
   },
@@ -289,6 +289,96 @@ export const games: Game[] = [
     gameUrl: 'https://script.google.com/macros/s/AKfycbzldWJTTfMKpL3kwAhT9_8QgVggy4hWyfywpbcHtnnMkhyNaBsSiDtEl2GH7AoTY1WA/exec',
     tags: ['management', 'simulation', 'cooking', 'strategy'],
     featured: false,
+  },
+  {
+    id: '39',
+    title: 'Clash Royale',
+    description: 'Lead your troops to victory in this fast-paced, real-time multiplayer battle game.',
+    imageUrl: 'https://iili.io/KlXm6Xe.png',
+    gameUrl: 'https://r2.maddox.page/html/clash_royale/',
+    tags: ['strategy', 'multiplayer', 'card-game', 'real-time'],
+    featured: false,
+  },
+  {
+    id: '40',
+    title: 'Granny',
+    description: 'Escape from a creepy house before the terrifying Granny catches you. A suspenseful horror escape game.',
+    imageUrl: 'https://iili.io/Klh234n.png',
+    gameUrl: 'https://r2.maddox.page/html/granny/',
+    tags: ['horror', 'escape', 'puzzle', 'survival'],
+    featured: false,
+  },
+  {
+    id: '41',
+    title: 'Crazy Cattle 3D',
+    description: 'Cause mayhem as a cow in this chaotic 3D action game.',
+    imageUrl: 'https://iili.io/Klh3BKF.png',
+    gameUrl: 'https://r2.maddox.page/html/crazycattle3d/',
+    tags: ['action', '3d', 'simulation', 'humor'],
+    featured: false,
+  },
+  {
+    id: '42',
+    title: 'Bloons TD 5',
+    description: 'The classic tower defense game. Pop bloons, upgrade your monkeys, and defend your towers.',
+    imageUrl: 'https://iili.io/KlhKXae.png',
+    gameUrl: 'https://r2.maddox.page/html/btd5/',
+    tags: ['tower-defense', 'strategy', 'puzzle'],
+    featured: false,
+  },
+  {
+    id: '43',
+    title: 'Stickman Hook',
+    description: 'Swing through hundreds of levels in this addictive physics-based swinging game.',
+    imageUrl: 'https://iili.io/KlhByS1.png',
+    gameUrl: 'https://r2.maddox.page/html/stickman_hook/',
+    tags: ['skill', 'arcade', 'physics', 'platformer'],
+    featured: false,
+  },
+  {
+    id: '44',
+    title: 'Geometry Dash',
+    description: 'Jump and fly your way through danger in this rhythm-based action platformer.',
+    imageUrl: 'https://iili.io/Klho9ja.png',
+    gameUrl: 'https://scratch.mit.edu/projects/105500895/embed',
+    tags: ['platformer', 'rhythm', 'skill', 'difficult'],
+    featured: false,
+  },
+  {
+    id: '45',
+    title: 'Squid Games',
+    description: 'Compete in a series of deadly mini-games inspired by the hit show.',
+    imageUrl: 'https://iili.io/Klh736g.png',
+    gameUrl: 'https://r2.maddox.page/html/squid_game_2_mini_games/',
+    tags: ['action', 'survival', 'mini-games', 'multiplayer'],
+    featured: false,
+  },
+  {
+    id: '46',
+    title: 'Thorns and Balloons',
+    description: 'A physics puzzler where you must guide your character safely past thorns and other obstacles.',
+    imageUrl: 'https://iili.io/KlhaBhN.png',
+    gameUrl: 'https://r2.maddox.page/html/thorns_and_ballons/',
+    tags: ['puzzle', 'physics', 'strategy'],
+    featured: false,
+  },
+  {
+    id: '47',
+    title: 'Eggy Car',
+    description: 'Drive carefully to transport an egg without letting it fall and break. A delicate driving challenge.',
+    imageUrl: 'https://iili.io/KlhlGmx.png',
+    gameUrl: 'https://r2.maddox.page/html/eggy_car/',
+    tags: ['driving', 'skill', 'physics', 'casual'],
+    featured: false,
+  },
+  {
+    id: '48',
+    title: 'Gun Spin',
+    description: 'Use the recoil of your spinning gun to propel yourself upwards and reach new heights.',
+    imageUrl: 'https://iili.io/Klh1dnp.png',
+    gameUrl: 'https://r2.maddox.page/html/gun_spin/',
+    tags: ['arcade', 'skill', 'physics', 'endless'],
+    featured: false,
   }
 ];
 
@@ -299,6 +389,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
