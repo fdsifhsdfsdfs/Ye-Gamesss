@@ -388,6 +388,15 @@ export const games: Game[] = [
     gameUrl: 'https://r2.maddox.page/html/papasburgeria/',
     tags: ['management', 'simulation', 'cooking', 'papas'],
     featured: false,
+  },
+  {
+    id: '50',
+    title: 'Papas Freezeria',
+    description: 'Serve up delicious frozen treats to customers in this cool restaurant management game.',
+    imageUrl: 'https://iili.io/KljI0Xe.png',
+    gameUrl: 'https://r2.maddox.page/html/papasfreezeria/',
+    tags: ['management', 'simulation', 'cooking', 'papas'],
+    featured: false,
   }
 ];
 
@@ -398,6 +407,7 @@ export const games: Game[] = [
     
 
     
+
 
 
 
