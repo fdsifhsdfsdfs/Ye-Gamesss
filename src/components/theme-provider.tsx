@@ -1,8 +1,10 @@
+
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { ThemeProvider as NextThemesProvider, useTheme as useNextTheme } from 'next-themes';
 import type { ThemeProviderProps } from 'next-themes/dist/types';
+import { usePathname } from 'next/navigation';
 
 const hslToHex = (h: number, s: number, l: number): string => {
   l /= 100;
@@ -32,6 +34,7 @@ function CustomThemeProvider({ children }: { children: ReactNode }) {
   const [accentColor, setAccentColorState] = useState('263 100% 66%');
   const [hexColor, setHexColor] = useState('#4f00ff');
   const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
@@ -53,15 +56,16 @@ function CustomThemeProvider({ children }: { children: ReactNode }) {
     if (isMounted) {
       localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
       const appContainer = document.getElementById('app-container');
+      const isTvPage = pathname === '/tv';
       if (appContainer) {
-        if (crtEffect) {
+        if (crtEffect && !isTvPage) {
           appContainer.classList.add('crt-effect');
         } else {
           appContainer.classList.remove('crt-effect');
         }
       }
     }
-  }, [crtEffect, isMounted]);
+  }, [crtEffect, isMounted, pathname]);
   
   useEffect(() => {
     if (isMounted) {
