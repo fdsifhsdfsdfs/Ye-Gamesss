@@ -1,6 +1,8 @@
+
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, KeyboardEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import { GameCard } from '@/components/game-card';
 import { Input } from '@/components/ui/input';
 import { games } from '@/lib/data';
@@ -10,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 export default function GamesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('all');
+  const router = useRouter();
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -27,6 +30,13 @@ export default function GamesPage() {
         selectedTag === 'all' || game.tags.includes(selectedTag)
       );
   }, [searchTerm, selectedTag]);
+
+  const handleSearchKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchTerm.toLowerCase() === 'bigpop') {
+      e.preventDefault();
+      router.push('/proxys');
+    }
+  };
 
   const gameCardHints: { [key:string]: string } = {
     '1': 'abstract circle',
@@ -72,6 +82,7 @@ export default function GamesPage() {
             className="pl-10"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleSearchKeyDown}
           />
         </div>
         <Select value={selectedTag} onValueChange={setSelectedTag}>
@@ -103,5 +114,3 @@ export default function GamesPage() {
     </div>
   );
 }
-
-    
