@@ -1,4 +1,6 @@
 
+'use client';
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/header';
@@ -6,20 +8,26 @@ import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import Script from 'next/script';
-
-export const metadata: Metadata = {
-  title: 'Ye-Games',
-  description: 'Dynamic Gaming Universes',
-};
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isTvPage = pathname === '/tv';
+
+  const metadata: Metadata = {
+    title: 'Ye-Games',
+    description: 'Dynamic Gaming Universes',
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <title>{String(metadata.title)}</title>
+        <meta name="description" content={String(metadata.description)} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -46,7 +54,7 @@ export default function RootLayout({
               <main className="flex-1 container mx-auto px-4 py-8">
                 {children}
               </main>
-              <Footer />
+              {!isTvPage && <Footer />}
             </div>
         </ThemeProvider>
         <Toaster />
