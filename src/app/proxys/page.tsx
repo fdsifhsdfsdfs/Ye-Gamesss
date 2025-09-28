@@ -30,10 +30,16 @@ export default function ProxysPage() {
   }, [searchTerm, selectedTag]);
 
   const proxyCardHints: { [key:string]: string } = {
-    '1': 'space nebula',
-    '2': 'anonymous browsing',
-    '3': 'ajh vault',
-    '4': 'school laptop'
+    '1': 'dark web',
+    '2': 'frog character',
+    '3': 'pizza box',
+    '4': 'ajh vault',
+    '5': 'truffle chocolate',
+    '6': 'university logo',
+    '7': 'doge meme',
+    '8': 'ocean wave',
+    '9': 'utopia city',
+    '10': 'emerald gem'
   };
 
   return (
