@@ -30,10 +30,16 @@ export default function AppsPage() {
   }, [searchTerm, selectedTag]);
 
   const appCardHints: { [key:string]: string } = {
-    '1': 'social media',
-    '2': 'video streaming',
-    '3': 'music streaming',
-    '4': 'code editor',
+    '1': 'discord logo',
+    '2': 'youtube logo',
+    '3': 'spotify logo',
+    '4': 'photopea logo',
+    '5': 'google logo',
+    '6': 'instagram logo',
+    '7': 'reddit logo',
+    '8': 'twitter logo',
+    '9': 'twitch logo',
+    '10': 'soundcloud logo'
   };
 
   return (
