@@ -34,7 +34,7 @@ export default function GamesPage() {
   const handleSearchKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && searchTerm.toLowerCase() === 'bigpop') {
       e.preventDefault();
-      router.push('/proxys');
+      router.push('/proxys?show=all');
     }
   };
 

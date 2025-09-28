@@ -10,6 +10,7 @@ import Image from 'next/image';
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/games', label: 'Games', icon: Gamepad2 },
+  { href: '/proxys', label: 'Proxys', icon: Server },
   { href: '/vm', label: 'VM', icon: Laptop },
   { href: '/ai', label: 'AI', icon: Brain },
   { href: '/tv', label: 'TV/Movies', icon: Tv },
@@ -32,7 +33,7 @@ export function Header() {
               href={item.href}
               className={cn(
                 'transition-colors hover:text-foreground/80',
-                pathname === item.href ? 'text-foreground font-semibold' : 'text-foreground/60'
+                pathname.startsWith(item.href) && item.href !== '/' || pathname === item.href ? 'text-foreground font-semibold' : 'text-foreground/60'
               )}
             >
               {item.label}

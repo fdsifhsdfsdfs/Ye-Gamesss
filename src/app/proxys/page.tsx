@@ -1,25 +1,36 @@
 
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { ProxyCard } from '@/components/proxy-card';
 import { Input } from '@/components/ui/input';
 import { proxys } from '@/lib/proxys-data';
 import { Search } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-export default function ProxysPage() {
+function ProxysContent() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('all');
+  const searchParams = useSearchParams();
+  const showAll = searchParams.get('show') === 'all';
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     proxys.forEach(proxy => proxy.tags.forEach(tag => tags.add(tag)));
     return ['all', ...Array.from(tags).sort()];
   }, []);
+  
+  const availableProxys = useMemo(() => {
+    if (showAll) {
+      return proxys;
+    }
+    const half = Math.ceil(proxys.length / 2);
+    return proxys.slice(0, half);
+  }, [showAll]);
 
   const filteredProxys = useMemo(() => {
-    return proxys
+    return availableProxys
       .filter(proxy => 
         proxy.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
         proxy.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -27,7 +38,7 @@ export default function ProxysPage() {
       .filter(proxy => 
         selectedTag === 'all' || proxy.tags.includes(selectedTag)
       );
-  }, [searchTerm, selectedTag]);
+  }, [searchTerm, selectedTag, availableProxys]);
 
   const proxyCardHints: { [key:string]: string } = {
     '1': 'dark web',
@@ -87,5 +98,13 @@ export default function ProxysPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ProxysPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProxysContent />
+    </Suspense>
   );
 }
