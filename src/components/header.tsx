@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Server, Brain, Gamepad2, Settings, Laptop, Tv } from 'lucide-react';
+import { Home, Server, Brain, Gamepad2, Settings, Tv } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -11,7 +11,6 @@ const navItems = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/games', label: 'Games', icon: Gamepad2 },
   { href: '/proxys', label: 'Proxys', icon: Server },
-  { href: '/vm', label: 'VM', icon: Laptop },
   { href: '/ai', label: 'AI', icon: Brain },
   { href: '/tv', label: 'TV/Movies', icon: Tv },
 ];
