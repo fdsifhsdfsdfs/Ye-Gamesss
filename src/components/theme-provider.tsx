@@ -56,9 +56,9 @@ function CustomThemeProvider({ children }: { children: ReactNode }) {
     if (isMounted) {
       localStorage.setItem('crtEffect', JSON.stringify(crtEffect));
       const appContainer = document.getElementById('app-container');
-      const isTvPage = pathname === '/tv';
+      const isEmbedPage = pathname === '/tv' || pathname === '/youtube';
       if (appContainer) {
-        if (crtEffect && !isTvPage) {
+        if (crtEffect && !isEmbedPage) {
           appContainer.classList.add('crt-effect');
         } else {
           appContainer.classList.remove('crt-effect');

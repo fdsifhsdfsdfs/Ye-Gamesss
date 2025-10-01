@@ -14,6 +14,7 @@ const navItems = [
   { href: '/proxys', label: 'Proxys', icon: Server },
   { href: '/ai', label: 'AI', icon: Brain },
   { href: '/tv', label: 'TV/Movies', icon: Tv },
+  { href: '/youtube', label: 'Youtube', icon: Tv },
 ];
 
 export function Header() {

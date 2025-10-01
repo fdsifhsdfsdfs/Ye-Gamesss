@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isTvPage = pathname === '/tv';
+  const isEmbedPage = pathname === '/tv' || pathname === '/youtube';
 
   const metadata: Metadata = {
     title: 'Ye-Games',
@@ -54,7 +54,7 @@ export default function RootLayout({
               <main className="flex-1 container mx-auto px-4 py-8">
                 {children}
               </main>
-              {!isTvPage && <Footer />}
+              {!isEmbedPage && <Footer />}
             </div>
         </ThemeProvider>
         <Toaster />
