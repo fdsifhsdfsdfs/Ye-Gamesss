@@ -259,7 +259,7 @@ export const games: Game[] = [
     title: 'Survival King',
     description: 'Compete in a battle arena, race against opponents, and fight for the crown in this survival game.',
     imageUrl: 'https://iili.io/K7JOkDF.png',
-    gameUrl: 'https://r2.maddox.page/html/race_survival_arena_king/',
+    gameUrl: 'https://embeddrr.web.app/embed#https://r2.maddox.page/html/race_survival_arena_king/',
     tags: ['action', 'survival', 'racing', 'arena'],
     featured: false,
   },
@@ -313,7 +313,7 @@ export const games: Game[] = [
     title: 'Crazy Cattle 3D',
     description: 'Cause mayhem as a cow in this chaotic 3D action game.',
     imageUrl: 'https://iili.io/Klh3BKF.png',
-    gameUrl: 'https://r2.maddox.page/html/crazycattle3d/',
+    gameUrl: 'https://embeddrr.web.app/embed#https://r2.maddox.page/html/crazycattle3d/',
     tags: ['action', '3d', 'simulation', 'humor'],
     featured: false,
   },
@@ -358,7 +358,7 @@ export const games: Game[] = [
     title: 'Thorns and Balloons',
     description: 'A physics puzzler where you must guide your character safely past thorns and other obstacles.',
     imageUrl: 'https://iili.io/KlhaBhN.png',
-    gameUrl: 'https://r2.maddox.page/html/thorns_and_ballons/',
+    gameUrl: 'https://embeddrr.web.app/embed#https://r2.maddox.page/html/thorns_and_ballons/',
     tags: ['puzzle', 'physics', 'strategy'],
     featured: false,
   },
@@ -430,3 +430,6 @@ export const games: Game[] = [
 
 
 
+
+
+    
