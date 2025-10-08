@@ -73,9 +73,9 @@ export function Header() {
           )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="w-9">
+              <Button variant="ghost" size="sm">
                 <MoreHorizontal className="h-4 w-4" />
-                <span className="sr-only">More</span>
+                <span>More</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
