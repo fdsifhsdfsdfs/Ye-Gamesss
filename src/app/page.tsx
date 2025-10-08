@@ -1,4 +1,7 @@
 
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Gamepad2, Globe, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
@@ -8,6 +11,70 @@ const FloatingIcon = ({ icon: Icon, className }: { icon: React.ElementType, clas
     <Icon className="h-8 w-8 text-primary" />
   </div>
 );
+
+const VisitorsConsole = () => {
+  const [visitors, setVisitors] = useState(0);
+  const [newVisitors, setNewVisitors] = useState(0);
+  const [displayedVisitors, setDisplayedVisitors] = useState('');
+  const [displayedNewVisitors, setDisplayedNewVisitors] = useState('');
+
+  useEffect(() => {
+    // Generate random numbers on client mount
+    const total = Math.floor(Math.random() * (2500 - 500 + 1)) + 500;
+    const fresh = Math.floor(Math.random() * (total / 2));
+    setVisitors(total);
+    setNewVisitors(fresh);
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const visitorsText = `> Visitors Today: ${visitors.toLocaleString()}`;
+    if (visitors > 0) {
+      const interval = setInterval(() => {
+        setDisplayedVisitors(visitorsText.substring(0, index + 1));
+        index++;
+        if (index === visitorsText.length) {
+          clearInterval(interval);
+          
+          // Start typing new visitors after a delay
+          setTimeout(() => {
+            let newIndex = 0;
+            const newVisitorsText = `> New Visitors Today: ${newVisitors.toLocaleString()}`;
+            const newInterval = setInterval(() => {
+              setDisplayedNewVisitors(newVisitorsText.substring(0, newIndex + 1));
+              newIndex++;
+              if (newIndex === newVisitorsText.length) {
+                clearInterval(newInterval);
+              }
+            }, 50);
+          }, 300);
+        }
+      }, 50);
+      return () => clearInterval(interval);
+    }
+  }, [visitors, newVisitors]);
+
+  return (
+    <div className="mt-6 bg-card/50 border border-border/20 rounded-lg p-4 max-w-md mx-auto md:mx-0 font-code text-sm">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="h-3 w-3 rounded-full bg-red-500"></span>
+        <span className="h-3 w-3 rounded-full bg-yellow-500"></span>
+        <span className="h-3 w-3 rounded-full bg-green-500"></span>
+      </div>
+      <div className="h-12">
+        <p className="whitespace-pre">
+          {displayedVisitors}
+          <span className="animate-pulse">_</span>
+        </p>
+        <p className="whitespace-pre">
+          {displayedNewVisitors}
+          {displayedVisitors.includes(':') && displayedNewVisitors.length > 0 && <span className="animate-pulse">_</span>}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 
 export default function Home() {
   return (
@@ -35,6 +102,7 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
+            <VisitorsConsole />
           </div>
           <div className="relative h-64 md:h-96 hidden md:block">
             <FloatingIcon icon={Gamepad2} className="top-0 left-1/4" />
