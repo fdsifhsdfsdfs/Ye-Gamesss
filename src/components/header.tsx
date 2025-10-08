@@ -35,13 +35,11 @@ export function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-8 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            {/* Placeholder for new logo */}
-            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold">
-              Y
-            </div>
             <div>
-              <h1 className="font-bold font-headline text-lg text-white">Ye Games</h1>
-              <p className="text-xs text-muted-foreground">Educational Lessons by eg hhs</p>
+              <h1 className="text-xl font-bold font-headline bg-gradient-to-r from-primary via-primary to-primary/70 text-transparent bg-clip-text">
+                Ye Games
+              </h1>
+              <p className="text-xs text-muted-foreground">by BxltRust</p>
             </div>
           </Link>
         </div>
