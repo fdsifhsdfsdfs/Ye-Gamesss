@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck, MoreHorizontal } from 'lucide-react';
+import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck, MoreHorizontal, Music } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
@@ -20,6 +20,7 @@ const navItems = [
 ];
 
 const moreItems = [
+  { href: '/music', label: 'Music', icon: Music },
   { href: '/ai', label: 'AI', icon: Brain },
   { href: '/settings', label: 'Settings', icon: Settings },
 ]
