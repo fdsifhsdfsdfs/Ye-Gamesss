@@ -55,7 +55,7 @@ const VisitorsConsole = () => {
   }, [visitors, newVisitors]);
 
   return (
-    <div className="mt-6 bg-card/50 border border-border/20 rounded-lg p-4 max-w-md mx-auto md:mx-0 font-code text-sm">
+    <div className="mt-6 bg-card/50 border border-border/20 rounded-lg p-4 max-w-md mx-auto font-code text-sm">
       <div className="flex items-center gap-2 mb-2">
         <span className="h-3 w-3 rounded-full bg-red-500"></span>
         <span className="h-3 w-3 rounded-full bg-yellow-500"></span>
@@ -75,40 +75,44 @@ const VisitorsConsole = () => {
   );
 };
 
-
 export default function Home() {
   return (
     <div className="relative min-h-[calc(100vh-10rem)] flex items-center justify-center overflow-hidden">
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white">
-              Welcome to <span className="text-primary">Ye Games</span>
-            </h1>
-            <p className="max-w-md mx-auto md:mx-0 text-lg text-muted-foreground">
-              Your ultimate destination for gmes, web prxies, and virtual machines
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-              <Button asChild size="lg">
-                <Link href="/games">
-                  <Gamepad2 className="mr-2"/>
-                  Start Gaming
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/apps">
-                  <Globe className="mr-2" />
-                  Browse Web
-                </Link>
-              </Button>
-            </div>
-            <VisitorsConsole />
+      
+      {/* Floating Icons - Background Elements */}
+      <div className="absolute inset-0 z-0 hidden md:block">
+        <FloatingIcon icon={Gamepad2} className="top-1/4 left-[15%] opacity-50" />
+        <FloatingIcon icon={ShieldCheck} className="top-1/2 left-[5%] opacity-50 animate-float-delay-1" />
+        <FloatingIcon icon={Globe} className="bottom-1/4 left-[20%] opacity-50 animate-float-delay-2" />
+        
+        <FloatingIcon icon={Gamepad2} className="top-1/4 right-[15%] opacity-50 animate-float-delay-1" />
+        <FloatingIcon icon={ShieldCheck} className="top-1/2 right-[5%] opacity-50 animate-float-delay-2" />
+        <FloatingIcon icon={Globe} className="bottom-1/4 right-[20%] opacity-50" />
+      </div>
+
+      <div className="container relative z-10 text-center">
+        <div className="space-y-6">
+          <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white">
+            Welcome to <span className="text-primary">Ye Games</span>
+          </h1>
+          <p className="max-w-xl mx-auto text-lg text-muted-foreground">
+            Your ultimate destination for games, web proxies, and virtual machines
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild size="lg">
+              <Link href="/games">
+                <Gamepad2 className="mr-2"/>
+                Start Gaming
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/apps">
+                <Globe className="mr-2" />
+                Browse Web
+              </Link>
+            </Button>
           </div>
-          <div className="relative h-64 md:h-96 hidden md:block">
-            <FloatingIcon icon={Gamepad2} className="top-0 left-1/4" />
-            <FloatingIcon icon={ShieldCheck} className="top-1/3 left-0 animate-float-delay-1" />
-            <FloatingIcon icon={Globe} className="top-2/3 left-1/3 animate-float-delay-2" />
-          </div>
+          <VisitorsConsole />
         </div>
       </div>
     </div>
