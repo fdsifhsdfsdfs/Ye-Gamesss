@@ -13,6 +13,20 @@ import { useTheme } from 'next-themes';
 
 type ContentItem = Game | App | Proxy;
 
+export async function generateStaticParams() {
+  const gamePaths = games.map((game) => ({
+    slug: ['game', game.id],
+  }));
+  const appPaths = apps.map((app) => ({
+    slug: ['app', app.id],
+  }));
+  const proxyPaths = proxys.map((proxy) => ({
+    slug: ['proxy', proxy.id],
+  }));
+
+  return [...gamePaths, ...appPaths, ...proxyPaths];
+}
+
 export default function PlayPage({ params }: { params: { slug: string[] } }) {
   const [type, id] = params.slug;
   const { theme } = useTheme();
@@ -84,7 +98,7 @@ export default function PlayPage({ params }: { params: { slug: string[] } }) {
         URL.revokeObjectURL(iframeSrc);
       }
     };
-  }, [item, iframeSrc]); // Added iframeSrc to dependencies to avoid memory leaks
+  }, [item]); // Removed iframeSrc from dependencies to avoid re-running on its own state change
 
   if (!item) {
     notFound();
