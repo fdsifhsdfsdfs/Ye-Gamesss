@@ -14,7 +14,7 @@ const remoteHostnames = [
   "www.inet-web.com",
   "iili.io",
   "gamepluto.com",
-  "a.silvergames.com",
+a.silvergames.com",
   "1games.io",
   "m.media-amazon.com",
   "img.poki-cdn.com"
