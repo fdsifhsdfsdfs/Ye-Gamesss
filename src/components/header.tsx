@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck, MoreHorizontal, Music } from 'lucide-react';
+import { Home, Gamepad2, Tv, AppWindow, Music, Settings, Globe, ShieldCheck, MoreHorizontal, Brain } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
@@ -39,7 +39,7 @@ export function Header() {
               <h1 className="text-xl font-bold font-headline bg-gradient-to-r from-primary via-primary to-primary/70 text-transparent bg-clip-text">
                 Ye Games
               </h1>
-              <p className="text-xs text-muted-foreground">by BxltRust</p>
+              <p className="text-xs text-muted-foreground">educational lessons by BxltRust</p>
             </div>
           </Link>
         </div>

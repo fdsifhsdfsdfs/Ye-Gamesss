@@ -18,7 +18,7 @@ export default function RootLayout({
 
   const metadata: Metadata = {
     title: 'Ye Games',
-    description: 'Educational Lessons by eg hhs',
+    description: 'educational lessons by BxltRust',
   };
 
   return (
