@@ -53,6 +53,15 @@ function ProxysContent() {
     '10': 'emerald gem'
   };
 
+  if (!showAll) {
+    return (
+      <div className="text-center py-16">
+        <h1 className="font-headline text-4xl font-bold">Access Denied</h1>
+        <p className="text-muted-foreground mt-4">You do not have permission to view this page.</p>
+      </div>
+    )
+  }
+
   return (
     <div className="space-y-8">
       <section>
