@@ -44,7 +44,7 @@ export function Header() {
           </Link>
         </div>
         
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-2 text-sm">
+        <nav className="hidden md:flex items-center gap-2 text-sm">
           <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="sm" asChild>
             <Link href="/">
               <Home className="h-4 w-4" />
@@ -87,7 +87,7 @@ export function Header() {
           </DropdownMenu>
         </nav>
 
-        <div className="flex items-center justify-end gap-4">
+        <div className="flex flex-1 items-center justify-end gap-4">
           {/* Future items can go here */}
         </div>
       </div>
