@@ -4,6 +4,7 @@ import type { Proxy } from './types';
 export const proxys: Proxy[] = [
   {
     id: '1',
+    type: 'proxy',
     title: 'Shadow',
     description: 'A proxy service for browsing the web securely and anonymously.',
     imageUrl: 'https://iili.io/K1ep1ob.png',
@@ -13,6 +14,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '2',
+    type: 'proxy',
     title: 'Froggies Arcade V4',
     description: 'An arcade of web games and apps, accessible through a proxy.',
     imageUrl: 'https://iili.io/K1kH8ib.png',
@@ -22,6 +24,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '3',
+    type: 'proxy',
     title: 'PeteZah',
     description: 'A versatile proxy for accessing a wide range of online content.',
     imageUrl: 'https://iili.io/K1kFfu2.png',
@@ -31,6 +34,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '4',
+    type: 'proxy',
     title: 'Ajh’s Vault',
     description: 'A secure vault for your browsing needs, keeping your activity private.',
     imageUrl: 'https://iili.io/K1kqpRf.png',
@@ -40,6 +44,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '5',
+    type: 'proxy',
     title: 'Truffled',
     description: 'A fast and reliable proxy service with a focus on performance.',
     imageUrl: 'https://iili.io/K1kzEKB.png',
@@ -49,6 +54,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '6',
+    type: 'proxy',
     title: 'UniUB v4',
     description: 'The fourth version of the universal unblocker proxy service.',
     imageUrl: 'https://iili.io/K1kRBEv.png',
@@ -58,6 +64,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '7',
+    type: 'proxy',
     title: 'Dogeub',
     description: 'A proxy service with a friendly interface and reliable performance.',
     imageUrl: 'https://iili.io/K1kEqCP.png',
@@ -67,6 +74,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '8',
+    type: 'proxy',
     title: 'Waves',
     description: 'Surf the web freely with this powerful and lightweight proxy.',
     imageUrl: 'https://iili.io/K1kOug2.md.png',
@@ -76,6 +84,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '9',
+    type: 'proxy',
     title: 'Utopia',
     description: 'A gateway to a perfect, unrestricted internet experience.',
     imageUrl: 'https://iili.io/K1kSDRp.png',
@@ -85,6 +94,7 @@ export const proxys: Proxy[] = [
   },
   {
     id: '10',
+    type: 'proxy',
     title: 'Emerald',
     description: 'A valuable tool for secure and private web browsing.',
     imageUrl: 'https://iili.io/K1km9KQ.png',
@@ -93,3 +103,5 @@ export const proxys: Proxy[] = [
     featured: false,
   },
 ];
+
+    

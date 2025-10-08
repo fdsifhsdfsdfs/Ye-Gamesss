@@ -4,6 +4,7 @@ import type { App } from './types';
 export const apps: App[] = [
   {
     id: '1',
+    type: 'app',
     title: 'Discord',
     description: 'Chat, hang out, and stay close with your friends and communities.',
     appUrl: 'https://embeddrr.web.app/embed#https://discord.com/app',
@@ -13,6 +14,7 @@ export const apps: App[] = [
   },
   {
     id: '2',
+    type: 'app',
     title: 'YouTube',
     description: 'Watch your favorite videos, creators, and channels.',
     appUrl: 'https://embeddrr.web.app/embed#https://youtube.com',
@@ -22,6 +24,7 @@ export const apps: App[] = [
   },
   {
     id: '3',
+    type: 'app',
     title: 'Spotify (Web Player)',
     description: 'Listen to millions of songs and podcasts on the web.',
     appUrl: 'https://embeddrr.web.app/embed#https://open.spotify.com',
@@ -31,6 +34,7 @@ export const apps: App[] = [
   },
   {
     id: '4',
+    type: 'app',
     title: 'Photopea (Web Editor)',
     description: 'A powerful online photo and graphics editor.',
     appUrl: 'https://embeddrr.web.app/embed#https://photopea.com',
@@ -40,6 +44,7 @@ export const apps: App[] = [
   },
   {
     id: '5',
+    type: 'app',
     title: 'Google Search',
     description: 'Search the world\'s information, including webpages, images, videos and more.',
     appUrl: 'https://embeddrr.web.app/embed#https://google.com',
@@ -49,6 +54,7 @@ export const apps: App[] = [
   },
   {
     id: '6',
+    type: 'app',
     title: 'Instagram (Web)',
     description: 'Connect with friends, share what you\'re up to, or see what\'s new from others all over the world.',
     appUrl: 'https://embeddrr.web.app/embed#https://instagram.com',
@@ -58,6 +64,7 @@ export const apps: App[] = [
   },
   {
     id: '7',
+    type: 'app',
     title: 'Reddit (Web)',
     description: 'The front page of the internet. Find communities you\'re interested in, and become part of an online community!',
     appUrl: 'https://embeddrr.web.app/embed#https://reddit.com',
@@ -67,6 +74,7 @@ export const apps: App[] = [
   },
   {
     id: '8',
+    type: 'app',
     title: 'X (Twitter) (Web)',
     description: 'From breaking news and entertainment to sports and politics, get the full story with all the live commentary.',
     appUrl: 'https://embeddrr.web.app/embed#https://x.com',
@@ -76,6 +84,7 @@ export const apps: App[] = [
   },
   {
     id: '9',
+    type: 'app',
     title: 'Twitch (Streams)',
     description: 'The world’s leading live streaming platform for gamers and the things we love.',
     appUrl: 'https://embeddrr.web.app/embed#https://twitch.tv',
@@ -85,6 +94,7 @@ export const apps: App[] = [
   },
   {
     id: '10',
+    type: 'app',
     title: 'SoundCloud',
     description: 'Listen to your favorite artists, discover new music, and share your own audio.',
     appUrl: 'https://embeddrr.web.app/embed#https://soundcloud.com',
@@ -93,3 +103,5 @@ export const apps: App[] = [
     featured: false
   }
 ];
+
+    

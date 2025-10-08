@@ -4,6 +4,7 @@ import type { Game } from './types';
 export const games: Game[] = [
   {
     id: '1',
+    type: 'game',
     title: 'Core Ball',
     description: 'A simple and addictive game about timing and precision. Can you attach all the balls to the core without them colliding?',
     imageUrl: 'https://iili.io/KCqdtef.png',
@@ -13,6 +14,7 @@ export const games: Game[] = [
   },
   {
     id: '3',
+    type: 'game',
     title: 'Monkey Mart',
     description: 'Manage your own supermarket, stock shelves, and serve customers in this fun management game.',
     imageUrl: 'https://play-lh.googleusercontent.com/rWReIdyvDaYJPeOxn7hbC0b-96ixGpQKM_EndiQa3SUME8TtI_rNUcI4qsw5teK9mqk',
@@ -22,6 +24,7 @@ export const games: Game[] = [
   },
   {
     id: '4',
+    type: 'game',
     title: 'Cluster Rush',
     description: 'Jump from truck to truck in a high-speed, high-stakes game of agility and timing.',
     imageUrl: 'https://rocketgames.imgix.net/uploads/games/c/cluster-rush/cluster-rush.5c9f51.png?auto=format,compress,enhance&w=314&dpr=1',
@@ -31,6 +34,7 @@ export const games: Game[] = [
   },
   {
     id: '6',
+    type: 'game',
     title: 'Car Crash',
     description: 'A realistic car crash simulator. Test the limits of destruction.',
     imageUrl: 'https://iili.io/KBcIBea.png',
@@ -40,6 +44,7 @@ export const games: Game[] = [
   },
   {
     id: '7',
+    type: 'game',
     title: 'FNAF',
     description: "Survive five nights at Freddy Fazbear's Pizzeria in this terrifying horror game.",
     imageUrl: 'https://iili.io/KBciryx.jpg',
@@ -49,6 +54,7 @@ export const games: Game[] = [
   },
   {
     id: '8',
+    type: 'game',
     title: 'Idle Breakout',
     description: 'A modern twist on a classic. Break bricks, earn cash, and buy upgrades to break even more bricks.',
     imageUrl: 'https://iili.io/KadzKX9.png',
@@ -58,6 +64,7 @@ export const games: Game[] = [
   },
   {
     id: '9',
+    type: 'game',
     title: 'Drift Boss',
     description: 'Show off your driving skills by drifting through tight corners.',
     imageUrl: 'https://iili.io/KBlF5Xt.jpg',
@@ -67,6 +74,7 @@ export const games: Game[] = [
   },
   {
     id: '10',
+    type: 'game',
     title: 'CSGO Clicker',
     description: 'Click to open cases and collect rare items in this addictive clicking game.',
     imageUrl: 'https://iili.io/K7JLNtf.png',
@@ -76,6 +84,7 @@ export const games: Game[] = [
   },
   {
     id: '11',
+    type: 'game',
     title: 'Cookie Clicker',
     description: 'An addictive idle game where you click a cookie to make more cookies. Upgrade your production to create a cookie empire.',
     imageUrl: 'https://iili.io/KCqz1Jp.png',
@@ -85,6 +94,7 @@ export const games: Game[] = [
   },
   {
     id: '12',
+    type: 'game',
     title: 'Slope',
     description: 'An endless runner game where you control a ball down a series of slopes.',
     imageUrl: 'https://iili.io/KCq7Xyv.png',
@@ -94,6 +104,7 @@ export const games: Game[] = [
   },
   {
     id: '14',
+    type: 'game',
     title: 'Minecraft',
     description: 'The classic sandbox game. Build, explore, and survive.',
     imageUrl: 'https://iili.io/K79DUzJ.png',
@@ -103,6 +114,7 @@ export const games: Game[] = [
   },
   {
     id: '15',
+    type: 'game',
     title: 'Steal a Brainrot',
     description: 'Steal a Brainrot is a Roblox game where players steal and collect quirky meme-like characters while protecting their own from being taken.',
     imageUrl: 'https://iili.io/KRjlVl1.md.png',
@@ -112,6 +124,7 @@ export const games: Game[] = [
   },
   {
     id: '16',
+    type: 'game',
     title: 'Grow a Garden',
     description: 'Cultivate your own virtual garden, plant seeds, water them, and watch them grow into beautiful flowers and plants.',
     imageUrl: 'https://iili.io/KRjVNbn.png',
@@ -121,6 +134,7 @@ export const games: Game[] = [
   },
   {
     id: '18',
+    type: 'game',
     title: 'COD Zombies Portable',
     description: 'Survive waves of zombies in this portable version of the classic game mode.',
     imageUrl: 'https://iili.io/KRwCPIe.png',
@@ -130,6 +144,7 @@ export const games: Game[] = [
   },
   {
     id: '19',
+    type: 'game',
     title: 'Block Blast',
     description: 'A challenging puzzle game where you fit blocks together to clear lines.',
     imageUrl: 'https://iili.io/KRw7EJa.png',
@@ -139,6 +154,7 @@ export const games: Game[] = [
   },
   {
     id: '20',
+    type: 'game',
     title: 'Poly Track',
     description: 'A fast-paced, futuristic racing game where you navigate through a low-poly world.',
     imageUrl: 'https://iili.io/KRkKiJV.png',
@@ -148,6 +164,7 @@ export const games: Game[] = [
   },
   {
     id: '21',
+    type: 'game',
     title: 'Rocket Soccer Derby',
     description: 'Combine soccer with rocket-powered cars in this high-octane multiplayer game.',
     imageUrl: 'https://iili.io/KRkqE6G.png',
@@ -157,6 +174,7 @@ export const games: Game[] = [
   },
   {
     id: '22',
+    type: 'game',
     title: 'Moto X3M',
     description: 'A fun and challenging bike racing game with crazy stunts and obstacles.',
     imageUrl: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m.jpg',
@@ -166,6 +184,7 @@ export const games: Game[] = [
   },
   {
     id: '23',
+    type: 'game',
     title: 'Rooftop Snipers',
     description: 'A chaotic physics-based shooting game. Try to knock your opponent off the roof.',
     imageUrl: 'https://iili.io/KRNoRQn.png',
@@ -175,6 +194,7 @@ export const games: Game[] = [
   },
   {
     id: '24',
+    type: 'game',
     title: 'Snow Rider 3D',
     description: 'Ride your sled down a snowy mountain, avoid obstacles, and collect gifts.',
     imageUrl: 'https://iili.io/KRN0Zhb.png',
@@ -184,6 +204,7 @@ export const games: Game[] = [
   },
   {
     id: '25',
+    type: 'game',
     title: 'Retro Bowl',
     description: 'Live out your dream as an NFL quarterback in this retro-style football game. Manage your team, call the plays, and lead them to victory.',
     imageUrl: 'https://iili.io/KatuwI2.png',
@@ -193,6 +214,7 @@ export const games: Game[] = [
   },
   {
     id: '26',
+    type: 'game',
     title: 'Time Shooter 3 SWAT',
     description: 'A tactical shooter where time only moves when you do. Plan your moves carefully to take down enemies.',
     imageUrl: 'https://iili.io/KROzw9R.jpg',
@@ -202,6 +224,7 @@ export const games: Game[] = [
   },
   {
     id: '27',
+    type: 'game',
     title: 'Zombies Coming',
     description: 'Survive the onslaught of the undead in this action-packed zombie shooter.',
     imageUrl: 'https://iili.io/K7Hlon1.png',
@@ -211,6 +234,7 @@ export const games: Game[] = [
   },
   {
     id: '28',
+    type: 'game',
     title: 'Bitlife',
     description: 'A life simulation game where you can become anyone and live any life.',
     imageUrl: 'https://iili.io/K7J0Y8J.png',
@@ -220,6 +244,7 @@ export const games: Game[] = [
   },
   {
     id: '30',
+    type: 'game',
     title: 'Happy Wheels',
     description: 'A bloody and hilarious physics-based game. Navigate deadly obstacle courses with unconventional characters.',
     imageUrl: 'https://iili.io/K7JX7iQ.png',
@@ -229,6 +254,7 @@ export const games: Game[] = [
   },
   {
     id: '32',
+    type: 'game',
     title: 'Basketball Legends',
     description: 'Play as your favorite basketball stars in this 2-player sports game.',
     imageUrl: 'https://iili.io/K7JwoUN.png',
@@ -238,6 +264,7 @@ export const games: Game[] = [
   },
   {
     id: '33',
+    type: 'game',
     title: 'OvO',
     description: 'A fast-paced platformer where you use parkour skills to navigate challenging levels.',
     imageUrl: 'https://iili.io/K7Jwi1R.png',
@@ -247,6 +274,7 @@ export const games: Game[] = [
   },
   {
     id: '34',
+    type: 'game',
     title: 'Slowroads',
     description: 'A relaxing driving game focused on the journey, not the destination. Enjoy a peaceful, endless drive.',
     imageUrl: 'https://iili.io/K7JO9u1.png',
@@ -256,6 +284,7 @@ export const games: Game[] = [
   },
   {
     id: '35',
+    type: 'game',
     title: 'Survival King',
     description: 'Compete in a battle arena, race against opponents, and fight for the crown in this survival game.',
     imageUrl: 'https://iili.io/K7JOkDF.png',
@@ -265,6 +294,7 @@ export const games: Game[] = [
   },
   {
     id: '36',
+    type: 'game',
     title: 'The Impossible Quiz',
     description: 'A famously difficult quiz that tests your logic and outside-the-box thinking with tricky questions.',
     imageUrl: 'https://iili.io/K7JkVYQ.png',
@@ -274,6 +304,7 @@ export const games: Game[] = [
   },
   {
     id: '37',
+    type: 'game',
     title: 'Basket Random',
     description: 'A chaotic and fun 2-player basketball game with random physics and hilarious gameplay.',
     imageUrl: 'https://iili.io/K7Jvzt1.png',
@@ -283,6 +314,7 @@ export const games: Game[] = [
   },
   {
     id: '38',
+    type: 'game',
     title: 'Papas Pizzeria',
     description: 'Manage a busy pizzeria, take orders, bake pizzas, and keep your customers happy in this classic restaurant management game.',
     imageUrl: 'https://iili.io/K7J8SmN.png',
@@ -292,6 +324,7 @@ export const games: Game[] = [
   },
   {
     id: '39',
+    type: 'game',
     title: 'Clash Royale',
     description: 'Lead your troops to victory in this fast-paced, real-time multiplayer battle game.',
     imageUrl: 'https://iili.io/KlXm6Xe.png',
@@ -301,6 +334,7 @@ export const games: Game[] = [
   },
   {
     id: '40',
+    type: 'game',
     title: 'Granny',
     description: 'Escape from a creepy house before the terrifying Granny catches you. A suspenseful horror escape game.',
     imageUrl: 'https://iili.io/Klh234n.png',
@@ -310,6 +344,7 @@ export const games: Game[] = [
   },
   {
     id: '41',
+    type: 'game',
     title: 'Crazy Cattle 3D',
     description: 'Cause mayhem as a cow in this chaotic 3D action game.',
     imageUrl: 'https://iili.io/Klh3BKF.png',
@@ -319,6 +354,7 @@ export const games: Game[] = [
   },
   {
     id: '42',
+    type: 'game',
     title: 'Bloons TD 5',
     description: 'The classic tower defense game. Pop bloons, upgrade your monkeys, and defend your towers.',
     imageUrl: 'https://iili.io/KlhKXae.png',
@@ -328,6 +364,7 @@ export const games: Game[] = [
   },
   {
     id: '43',
+    type: 'game',
     title: 'Stickman Hook',
     description: 'Swing through hundreds of levels in this addictive physics-based swinging game.',
     imageUrl: 'https://iili.io/KlhByS1.png',
@@ -337,6 +374,7 @@ export const games: Game[] = [
   },
   {
     id: '44',
+    type: 'game',
     title: 'Geometry Dash',
     description: 'Jump and fly your way through danger in this rhythm-based action platformer.',
     imageUrl: 'https://iili.io/Klho9ja.png',
@@ -346,6 +384,7 @@ export const games: Game[] = [
   },
   {
     id: '45',
+    type: 'game',
     title: 'Squid Games',
     description: 'Compete in a series of deadly mini-games inspired by the hit show.',
     imageUrl: 'https://iili.io/Klh736g.png',
@@ -355,6 +394,7 @@ export const games: Game[] = [
   },
   {
     id: '46',
+    type: 'game',
     title: 'Thorns and Balloons',
     description: 'A physics puzzler where you must guide your character safely past thorns and other obstacles.',
     imageUrl: 'https://iili.io/KlhaBhN.png',
@@ -364,6 +404,7 @@ export const games: Game[] = [
   },
   {
     id: '47',
+    type: 'game',
     title: 'Eggy Car',
     description: 'Drive carefully to transport an egg without letting it fall and break. A delicate driving challenge.',
     imageUrl: 'https://iili.io/KlhlGmx.png',
@@ -373,6 +414,7 @@ export const games: Game[] = [
   },
   {
     id: '48',
+    type: 'game',
     title: 'Gun Spin',
     description: 'Use the recoil of your spinning gun to propel yourself upwards and reach new heights.',
     imageUrl: 'https://iili.io/Klh1dnp.png',
@@ -382,6 +424,7 @@ export const games: Game[] = [
   },
   {
     id: '49',
+    type: 'game',
     title: 'Papas Burgeria',
     description: 'Take charge of Papas Burgeria, where you will grill burgers, add toppings, and serve a lineup of wacky customers.',
     imageUrl: 'https://iili.io/Kljo30l.png',
@@ -391,6 +434,7 @@ export const games: Game[] = [
   },
   {
     id: '50',
+    type: 'game',
     title: 'Papas Freezeria',
     description: 'Serve up delicious frozen treats to customers in this cool restaurant management game.',
     imageUrl: 'https://iili.io/KljI0Xe.png',
@@ -431,5 +475,7 @@ export const games: Game[] = [
 
 
 
+
+    
 
     

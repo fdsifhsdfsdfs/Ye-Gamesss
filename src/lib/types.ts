@@ -1,5 +1,7 @@
+
 export interface Game {
   id: string;
+  type: 'game';
   title: string;
   description: string;
   imageUrl: string;
@@ -9,7 +11,8 @@ export interface Game {
 }
 
 export interface Proxy {
-  id: string;
+  id:string;
+  type: 'proxy';
   title: string;
   description: string;
   imageUrl: string;
@@ -20,6 +23,7 @@ export interface Proxy {
 
 export interface App {
   id: string;
+  type: 'app';
   title: string;
   description: string;
   imageUrl: string;
@@ -27,3 +31,5 @@ export interface App {
   tags: string[];
   featured?: boolean;
 }
+
+    

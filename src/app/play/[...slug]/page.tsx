@@ -8,31 +8,16 @@ import { PlayClientPage } from './client-page';
 
 type ContentItem = Game | App | Proxy;
 
-export async function generateStaticParams() {
-  const gamePaths = games.map((game) => ({
-    slug: ['game', game.id],
-  }));
-  const appPaths = apps.map((app) => ({
-    slug: ['app', app.id],
-  }));
-  const proxyPaths = proxys.map((proxy) => ({
-    slug: ['proxy', proxy.id],
-  }));
+const allItems: ContentItem[] = [...games, ...apps, ...proxys];
 
-  return [...gamePaths, ...appPaths, ...proxyPaths];
+export async function generateStaticParams() {
+  return allItems.map((item) => ({
+    slug: [item.type, item.id],
+  }));
 }
 
 function getItem(type: string, id: string): ContentItem | undefined {
-  switch (type) {
-    case 'game':
-      return games.find((g) => g.id === id);
-    case 'app':
-      return apps.find((a) => a.id === id);
-    case 'proxy':
-      return proxys.find((p) => p.id === id);
-    default:
-      return undefined;
-  }
+    return allItems.find((item) => item.type === type && item.id === id);
 }
 
 function getUrl(item: ContentItem): string {
@@ -54,3 +39,5 @@ export default function PlayPage({ params }: { params: { slug: string[] } }) {
 
   return <PlayClientPage item={item} itemUrl={itemUrl} />;
 }
+
+    
