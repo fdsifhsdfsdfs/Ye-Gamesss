@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck } from 'lucide-react';
+import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck, MoreHorizontal } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
@@ -73,8 +73,9 @@ export function Header() {
           )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm">
-                More
+              <Button variant="ghost" size="icon" className="w-9">
+                <MoreHorizontal className="h-4 w-4" />
+                <span className="sr-only">More</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
