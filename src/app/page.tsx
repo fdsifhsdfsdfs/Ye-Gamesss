@@ -1,48 +1,48 @@
 
-import { GameCard } from '@/components/game-card';
 import { Button } from '@/components/ui/button';
-import { games } from '@/lib/data';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Gamepad2, Globe, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
+const FloatingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
+  <div className={`absolute w-16 h-16 bg-card rounded-2xl flex items-center justify-center shadow-lg animate-float ${className}`}>
+    <Icon className="h-8 w-8 text-primary" />
+  </div>
+);
+
 export default function Home() {
-  const featuredGames = games.filter(g => g.featured).slice(0, 4);
-
-  const gameCardHints: { [key: string]: string } = {
-    '1': 'abstract circle',
-    '3': 'monkey supermarket',
-    '15': 'roblox character',
-    '16': 'virtual garden',
-  };
-
   return (
-    <div className="space-y-16">
-      <section className="relative text-center py-20 overflow-hidden rounded-lg">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-        <div className="absolute top-0 left-0 -z-10 h-2/3 w-full bg-gradient-to-b from-primary/10 to-transparent"></div>
-        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-4 animate-fade-in-up">
-          Ye Games
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-8 animate-fade-in-up [animation-delay:0.2s]">
-          Discover, play, and manage your next favorite game. Ye-Games is your portal to worlds of adventure.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up [animation-delay:0.4s]">
-          <Button asChild size="lg">
-            <Link href="/games">Browse Games <ArrowRight className="ml-2 h-5 w-5" /></Link>
-          </Button>
+    <div className="relative min-h-[calc(100vh-10rem)] flex items-center justify-center overflow-hidden">
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6 text-center md:text-left">
+            <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white">
+              Welcome to <span className="text-primary">Some Stuff</span>
+            </h1>
+            <p className="max-w-md mx-auto md:mx-0 text-lg text-muted-foreground">
+              Your ultimate destination for gmes, web prxies, and virtual machines
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+              <Button asChild size="lg">
+                <Link href="/games">
+                  <Gamepad2 className="mr-2"/>
+                  Start Gaming
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/apps">
+                  <Globe className="mr-2" />
+                  Browse Web
+                </Link>
+              </Button>
+            </div>
+          </div>
+          <div className="relative h-64 md:h-96 hidden md:block">
+            <FloatingIcon icon={Gamepad2} className="top-0 left-1/4" />
+            <FloatingIcon icon={ShieldCheck} className="top-1/3 left-0 animate-float-delay-1" />
+            <FloatingIcon icon={Globe} className="top-2/3 left-1/3 animate-float-delay-2" />
+          </div>
         </div>
-      </section>
-
-      <section>
-        <h2 className="font-headline text-3xl font-bold mb-6">Featured Games</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredGames.map(game => (
-            <GameCard key={game.id} game={game} dataAiHint={gameCardHints[game.id]} />
-          ))}
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
-
-    

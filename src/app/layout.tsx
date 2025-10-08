@@ -7,7 +7,6 @@ import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toaster';
 import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
-import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
@@ -16,11 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isEmbedPage = pathname === '/tv' || pathname === '/youtube';
 
   const metadata: Metadata = {
-    title: 'Ye-Games',
-    description: 'Dynamic Gaming Universes',
+    title: 'Some Stuff',
+    description: 'Educational Lessons by eg hhs',
   };
 
   return (
@@ -51,10 +49,10 @@ export default function RootLayout({
         >
             <div id="app-container" className="relative flex min-h-screen flex-col">
               <Header />
-              <main className="flex-1 container mx-auto px-4 py-8">
+              <main className="flex-1">
                 {children}
               </main>
-              {!isEmbedPage && <Footer />}
+              <Footer />
             </div>
         </ThemeProvider>
         <Toaster />

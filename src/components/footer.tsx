@@ -1,16 +1,30 @@
+
+'use client';
+
 import Link from 'next/link';
+import { Button } from './ui/button';
+import { usePathname } from 'next/navigation';
 
 export function Footer() {
+  const pathname = usePathname();
+  const isEmbedPage = pathname === '/tv' || pathname === '/youtube';
+
+  if (isEmbedPage) {
+    return null;
+  }
+
   return (
-    <footer className="w-full border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 items-center justify-between px-4 text-xs text-muted-foreground">
-        <div className="flex gap-4">
-          <Link href="/terms" className="hover:text-foreground">Terms of Service</Link>
-          <Link href="/conduct" className="hover:text-foreground">Code of Conduct</Link>
-        </div>
-        <div>
-          <span>™ Ye Games 2025</span>
-        </div>
+    <footer className="w-full bg-transparent">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 px-4 py-6 text-xs text-muted-foreground">
+        <Button variant="ghost" size="sm" asChild>
+            <Link href="/terms">Privacy Policy</Link>
+        </Button>
+        <Button variant="ghost" size="sm" asChild>
+          <Link href="/conduct">DMCA</Link>
+        </Button>
+        <Button variant="ghost" size="sm" asChild>
+          <Link href="/#">Credits</Link>
+        </Button>
       </div>
     </footer>
   );
