@@ -17,7 +17,7 @@ export default function RootLayout({
   const pathname = usePathname();
 
   const metadata: Metadata = {
-    title: 'Some Stuff',
+    title: 'Ye Games',
     description: 'Educational Lessons by eg hhs',
   };
 

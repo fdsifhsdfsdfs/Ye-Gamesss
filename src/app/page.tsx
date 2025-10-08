@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Gamepad2, Globe, ShieldCheck } from 'lucide-react';
+import { Gamepad2, Globe, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 const FloatingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
@@ -16,7 +16,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white">
-              Welcome to <span className="text-primary">Some Stuff</span>
+              Welcome to <span className="text-primary">Ye Games</span>
             </h1>
             <p className="max-w-md mx-auto md:mx-0 text-lg text-muted-foreground">
               Your ultimate destination for gmes, web prxies, and virtual machines

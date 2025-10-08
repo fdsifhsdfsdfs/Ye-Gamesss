@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe } from 'lucide-react';
+import { Home, Gamepad2, Tv, AppWindow, Brain, Settings, Globe, ShieldCheck } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
@@ -36,10 +36,10 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             {/* Placeholder for new logo */}
             <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold">
-              S
+              Y
             </div>
             <div>
-              <h1 className="font-bold font-headline text-lg text-white">Some Stuff</h1>
+              <h1 className="font-bold font-headline text-lg text-white">Ye Games</h1>
               <p className="text-xs text-muted-foreground">Educational Lessons by eg hhs</p>
             </div>
           </Link>
