@@ -33,7 +33,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-8 flex items-center">
+        <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <div>
               <h1 className="text-xl font-bold font-headline bg-gradient-to-r from-primary via-primary to-primary/70 text-transparent bg-clip-text">
@@ -43,17 +43,14 @@ export function Header() {
             </div>
           </Link>
         </div>
-
-        <div className="flex items-center gap-2">
+        
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-2 text-sm">
           <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="sm" asChild>
             <Link href="/">
               <Home className="h-4 w-4" />
               <span>Home</span>
             </Link>
           </Button>
-        </div>
-        
-        <nav className="hidden md:flex items-center gap-2 text-sm ml-4">
           {navItems.map((item) => (
             <Button key={item.href} variant={pathname.startsWith(item.href) ? 'secondary' : 'ghost'} size="sm" asChild>
               <Link href={item.href}>
@@ -90,7 +87,7 @@ export function Header() {
           </DropdownMenu>
         </nav>
 
-        <div className="flex flex-1 items-center justify-end gap-4">
+        <div className="flex items-center justify-end gap-4">
           {/* Future items can go here */}
         </div>
       </div>
