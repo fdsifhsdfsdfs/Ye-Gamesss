@@ -64,11 +64,11 @@ const VisitorsConsole = () => {
       <div className="h-12">
         <p className="whitespace-pre">
           {displayedVisitors}
-          <span className="animate-pulse">_</span>
+          {displayedVisitors.length < `> Visitors Today: ${visitors.toLocaleString()}`.length && <span className="animate-pulse">_</span>}
         </p>
         <p className="whitespace-pre">
+          {displayedVisitors.length === `> Visitors Today: ${visitors.toLocaleString()}`.length && displayedNewVisitors.length < `> New Visitors Today: ${newVisitors.toLocaleString()}`.length && <span className="animate-pulse">_</span>}
           {displayedNewVisitors}
-          {displayedVisitors.includes(':') && displayedNewVisitors.length > 0 && <span className="animate-pulse">_</span>}
         </p>
       </div>
     </div>
