@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface GameCardProps {
   game: Game;
@@ -12,39 +13,8 @@ interface GameCardProps {
 }
 
 export function GameCard({ game, dataAiHint }: GameCardProps) {
-  const handleClick = () => {
-    const newWindow = window.open('about:blank', '_blank');
-    if (newWindow) {
-      const iframeContent = `
-        <html style="height:100%;margin:0;padding:0;">
-          <head>
-            <title>${game.title}</title>
-            <style>
-              body, html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                overflow: hidden;
-              }
-              iframe {
-                border: none;
-                width: 100%;
-                height: 100%;
-              }
-            </style>
-          </head>
-          <body>
-            <iframe src="${game.gameUrl}"></iframe>
-          </body>
-        </html>
-      `;
-      newWindow.document.write(iframeContent);
-      newWindow.document.close();
-    }
-  };
-
   return (
-    <div onClick={handleClick} className="group block cursor-pointer">
+    <Link href={`/play/game/${game.id}`} className="group block cursor-pointer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
@@ -71,6 +41,6 @@ export function GameCard({ game, dataAiHint }: GameCardProps) {
           </div>
         </CardContent>
       </Card>
-    </div>
+    </Link>
   );
 }
