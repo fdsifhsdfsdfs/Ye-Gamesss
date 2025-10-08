@@ -2,9 +2,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import type { Game, App, Proxy } from '@/lib/types';
 import { Button } from '@/components/ui/button';
-import { Maximize, Loader2 } from 'lucide-react';
+import { Maximize, Loader2, ChevronLeft } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 type ContentItem = Game | App | Proxy;
@@ -17,6 +18,7 @@ interface PlayClientPageProps {
 export function PlayClientPage({ item, itemUrl }: PlayClientPageProps) {
   const { theme } = useTheme();
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
 
   const handleFullscreen = () => {
     const newWindow = window.open('about:blank', '_blank');
@@ -43,7 +45,13 @@ export function PlayClientPage({ item, itemUrl }: PlayClientPageProps) {
   return (
     <div className="flex flex-col h-[calc(100vh-4rem)]">
       <header className="flex items-center justify-between p-2 border-b bg-background">
-        <h1 className="text-lg font-bold">{item.title}</h1>
+        <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" onClick={() => router.back()}>
+                <ChevronLeft className="mr-2" />
+                Back
+            </Button>
+            <h1 className="text-lg font-bold">{item.title}</h1>
+        </div>
         <Button variant="ghost" size="sm" onClick={handleFullscreen}>
           <Maximize className="mr-2" />
           Fullscreen
