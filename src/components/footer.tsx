@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 export function Footer() {
   const pathname = usePathname();
-  const isEmbedPage = pathname === '/tv' || pathname === '/youtube';
+  const isEmbedPage = pathname === '/tv' || pathname === '/youtube' || pathname === '/livetv';
 
   if (isEmbedPage) {
     return null;

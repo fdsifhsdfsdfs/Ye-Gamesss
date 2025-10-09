@@ -21,6 +21,7 @@ const navItems = [
 
 const moreItems = [
   { href: '/music', label: 'Music', icon: Music },
+  { href: '/livetv', label: 'Live TV', icon: Tv },
   { href: '/ai', label: 'AI', icon: Brain },
   { href: '/settings', label: 'Settings', icon: Settings },
 ]
