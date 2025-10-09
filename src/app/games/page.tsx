@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { games } from '@/lib/data';
 import { Search } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { RequestCard } from '@/components/request-card';
 
 export default function GamesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -100,7 +101,13 @@ export default function GamesPage() {
       </div>
 
       {filteredGames.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-6">
+          <RequestCard 
+            title="Request a Game" 
+            imageUrl="https://lh3.googleusercontent.com/sitesv/AICyYdZM5RtrNN3uCwxn1iuR9eeqxImqk7MukF2Q-_BYSunZjEnXLbEpPYGgl7FSGDAdBE-KIa5DtwDpGKIfXg1EFy8WYUJtNggLU6QYYTusK039yxQtR0GNu6IXAhZ9qbGx1W3cjI8MweFtEo01O15723huFeqtm3Jx7dUgjZAmV7GwLhA2egrQWTRZfNM=w1280"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScHrVppQEPwDZEHulh-2emR4MIPciHVYmYAz_InCOsO6QAa4g/viewform?usp=sf_link"
+            description="Have a game you want to see? Let us know!"
+          />
           {filteredGames.map(game => (
             <GameCard key={game.id} game={game} dataAiHint={gameCardHints[game.id]} />
           ))}
