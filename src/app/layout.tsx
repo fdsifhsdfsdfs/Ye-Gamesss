@@ -39,6 +39,8 @@ export default function RootLayout({
             gtag('config', 'G-E7GCD3WKMC');
           `}
         </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1159814234997674"
+     crossOrigin="anonymous"></script>
       </head>
       <body className="bg-background text-foreground font-body antialiased">
         <ThemeProvider
