@@ -1,8 +1,9 @@
 export const firebaseConfig = {
-  "projectId": "ye-games",
-  "appId": "1:29117565827:web:1f3000d384922a6a9d44b6",
-  "apiKey": "AIzaSyDsb8JttxGOF3FPeWKkN3zjemqaMq9iHvI",
-  "authDomain": "ye-games.firebaseapp.com",
-  "measurementId": "",
-  "messagingSenderId": "29117565827"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PULIC_FIREBASE_MEASUREMENT_ID,
 };
