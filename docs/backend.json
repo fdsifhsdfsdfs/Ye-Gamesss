@@ -1,0 +1,111 @@
+{
+  "entities": {
+    "Game": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Game",
+      "type": "object",
+      "description": "Represents a game in the Ye-Games application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Game entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the game."
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the game."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the game's image.",
+          "format": "uri"
+        },
+        "gameUrl": {
+          "type": "string",
+          "description": "URL where the game can be played.",
+          "format": "uri"
+        },
+        "tagIds": {
+          "type": "array",
+          "description": "References to Tags. (Relationship: Game N:N Tag)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "imageUrl",
+        "gameUrl"
+      ]
+    },
+    "Tag": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Tag",
+      "type": "object",
+      "description": "Represents a tag or category associated with games.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Tag entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the tag (e.g., 'Action', 'Strategy')."
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/games/{gameId}",
+        "definition": {
+          "entityName": "Game",
+          "schema": {
+            "$ref": "#/backend/entities/Game"
+          },
+          "description": "Stores game entities. Each game has a unique ID. No denormalized authorization fields are included as authorization is not dependent on any parent document attributes.",
+          "params": [
+            {
+              "name": "gameId",
+              "description": "The unique identifier for the game."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/tags/{tagId}",
+        "definition": {
+          "entityName": "Tag",
+          "schema": {
+            "$ref": "#/backend/entities/Tag"
+          },
+          "description": "Stores tag entities. Each tag has a unique ID. No denormalized authorization fields are included as authorization is not dependent on any parent document attributes.",
+          "params": [
+            {
+              "name": "tagId",
+              "description": "The unique identifier for the tag."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to efficiently manage games and tags for the Ye-Games application. It focuses on simplicity and scalability. The structure prioritizes structural segregation, separating game and tag data into their respective collections, and avoids complex authorization rules. All security rules rely on `request.auth.uid`. This structure supports the core features of the application including the dynamic home page, interactive game library, and admin content management.\n\n`Games` and `Tags` are stored in separate collections. This segregation simplifies querying and management. Since there is no ownership or complex authorization requirements beyond potential administrative roles (which would be implemented via a separate role collection), this flat structure is sufficient. This structure facilitates secure `list` operations (QAPs) because there is no need to filter based on complex ownership or membership criteria; access is controlled at the top level, and administrative privileges would be managed separately.\n\nAuthorization Independence is achieved because authorization is handled at the collection level for administrators. If more granular control were needed (e.g., game-specific editors), the 'Game' object would include a 'members' map as detailed in the design strategy."
+  }
+}

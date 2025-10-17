@@ -1,0 +1,43 @@
+/**
+ * @file Firebase Security Rules for Ye-Games application.
+ *
+ * Core Philosophy:
+ * This ruleset provides public read access to both `games` and `tags` collections.
+ * Write access is completely disallowed for all users.
+ *
+ * Data Structure:
+ * The database contains two top-level collections: `/games/{gameId}` and `/tags/{tagId}`.
+ *
+ * Key Security Decisions:
+ * - Public read access is granted to both collections, assuming the data is non-sensitive and intended for public consumption.
+ * - Write access is completely denied to all users. To enable write access, update the rules to implement proper authorization logic.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows public read access to games. Write access is denied.
+     * @path /games/{gameId}
+     * @allow (get, list) Allows any user to read game data.
+     * @deny (create, update, delete) Denies all users from creating, updating, or deleting game data.
+     * @principle Grants public read access and restricts write access.
+     */
+    match /games/{gameId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Allows public read access to tags. Write access is denied.
+     * @path /tags/{tagId}
+     * @allow (get, list) Allows any user to read tag data.
+     * @deny (create, update, delete) Denies all users from creating, updating, or deleting tag data.
+     * @principle Grants public read access and restricts write access.
+     */
+    match /tags/{tagId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+  }
+}
