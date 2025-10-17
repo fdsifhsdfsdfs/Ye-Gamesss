@@ -1,11 +1,12 @@
+
 'use client';
 
 import type { Proxy } from '@/lib/types';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, ExternalLink } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 interface ProxyCardProps {
   proxy: Proxy;
@@ -13,8 +14,33 @@ interface ProxyCardProps {
 }
 
 export function ProxyCard({ proxy, dataAiHint }: ProxyCardProps) {
+  const { theme } = useTheme();
+
+  const handleOpenInBlank = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const newWindow = window.open('about:blank', '_blank');
+    if (newWindow) {
+      const iframeContent = `
+        <html style="height:100%;margin:0;padding:0;background-color:${theme === 'dark' ? '#000' : '#fff'};">
+          <head>
+            <title>${proxy.title}</title>
+            <style>
+              body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+              iframe { border: none; width: 100%; height: 100%; }
+            </style>
+          </head>
+          <body>
+            <iframe src="${proxy.proxyUrl}"></iframe>
+          </body>
+        </html>
+      `;
+      newWindow.document.write(iframeContent);
+      newWindow.document.close();
+    }
+  };
+
   return (
-    <Link href={`/play/proxy/${proxy.id}`} className="group block cursor-pointer">
+    <div onClick={handleOpenInBlank} className="group block cursor-pointer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
@@ -31,7 +57,7 @@ export function ProxyCard({ proxy, dataAiHint }: ProxyCardProps) {
         <CardContent className="p-4 flex flex-col flex-grow">
           <CardTitle className="font-headline text-xl mb-2 flex justify-between items-start">
             <span>{proxy.title}</span>
-            <ArrowRight className="h-5 w-5 text-muted-foreground transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:text-primary shrink-0 ml-2" />
+            <ExternalLink className="h-5 w-5 text-muted-foreground transition-all duration-300 ease-in-out group-hover:text-primary shrink-0 ml-2" />
           </CardTitle>
           <CardDescription className="line-clamp-2 text-sm font-body mb-3 flex-grow">{proxy.description}</CardDescription>
           <div className="flex flex-wrap gap-2 pt-2 border-t border-border/20">
@@ -41,6 +67,6 @@ export function ProxyCard({ proxy, dataAiHint }: ProxyCardProps) {
           </div>
         </CardContent>
       </Card>
-    </Link>
+    </div>
   );
 }

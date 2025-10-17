@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 interface AppCardProps {
   app: App;
@@ -14,8 +14,32 @@ interface AppCardProps {
 }
 
 export function AppCard({ app, dataAiHint }: AppCardProps) {
+  const { theme } = useTheme();
+  
+  const handleOpenInBlank = () => {
+    const newWindow = window.open('about:blank', '_blank');
+    if (newWindow) {
+      const iframeContent = `
+        <html style="height:100%;margin:0;padding:0;background-color:${theme === 'dark' ? '#000' : '#fff'};">
+          <head>
+            <title>${app.title}</title>
+            <style>
+              body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+              iframe { border: none; width: 100%; height: 100%; }
+            </style>
+          </head>
+          <body>
+            <iframe src="${app.appUrl}"></iframe>
+          </body>
+        </html>
+      `;
+      newWindow.document.write(iframeContent);
+      newWindow.document.close();
+    }
+  };
+  
   return (
-    <Link href={`/play/app/${app.id}`} className="group block cursor-pointer">
+    <div onClick={handleOpenInBlank} className="group block cursor-pointer">
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
         <CardHeader className="p-0">
           <div className="relative aspect-square overflow-hidden">
@@ -42,6 +66,6 @@ export function AppCard({ app, dataAiHint }: AppCardProps) {
           </div>
         </CardContent>
       </Card>
-    </Link>
+    </div>
   );
 }
