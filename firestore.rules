@@ -2,42 +2,59 @@
  * @fileoverview Firestore Security Rules for Ye-Games application.
  *
  * Core Philosophy:
- * This ruleset provides completely public read access to both `games` and `tags` collections. Write access is completely disabled, effectively making these collections read-only. This allows the application to display game and tag data to all users without authentication.
+ * This ruleset prioritizes security and data access control. It defines access rules for games, tags, and analytics data.
  *
  * Data Structure:
- * The database consists of two top-level collections: `/games/{gameId}` and `/tags/{tagId}`.  There are no subcollections.
+ * - /games/{gameId}: Stores individual game documents.
+ * - /tags/{tagId}: Stores individual tag documents.
+ * - /analytics/live-stats: Stores live analytics data.
  *
  * Key Security Decisions:
- * - User listing is disallowed.
- * - Games and Tags are publicly readable.
- * - Writes are disabled, to ensure no accidental writes can occur in the Prototyping stage.
+ * - Analytics data is publicly readable to allow for general insights.
+ * - Write operations are disallowed on analytics in this prototype phase.
+ *
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Grants public read access to games, but restricts all write access.
+     * @description Grants read access to all users for game documents. Enforces owner-only for write access.
      * @path /games/{gameId}
-     * @allow (get, list) Any user can read game data.
-     * @deny (create, update, delete) No user can create, update, or delete games.
-     * @principle Allows public read access while preventing unauthorized writes.
+     * @allow (get, list): Any user can read game data.
+     * @deny (create, update, delete): No user can modify game data.
+     * @principle Public read, owner-only writes (not implemented yet).
      */
     match /games/{gameId} {
       allow get, list: if true;
-      allow create, update, delete: if false;
+      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
     }
 
     /**
-     * @description Grants public read access to tags, but restricts all write access.
+     * @description Grants read access to all users for tag documents. Enforces owner-only for write access.
      * @path /tags/{tagId}
-     * @allow (get, list) Any user can read tag data.
-     * @deny (create, update, delete) No user can create, update, or delete tags.
-     * @principle Allows public read access while preventing unauthorized writes.
+     * @allow (get, list): Any user can read tag data.
+     * @deny (create, update, delete): No user can modify tag data.
+     * @principle Public read, owner-only writes (not implemented yet).
      */
     match /tags/{tagId} {
       allow get, list: if true;
-      allow create, update, delete: if false;
+      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+    }
+
+    /**
+     * @description Grants read access to all users for the live-stats document. Write operations are disallowed.
+     * @path /analytics/live-stats
+     * @allow (get, list): Any user can read the analytics data.
+     * @deny (create, update, delete): No user can modify analytics data.
+     * @principle Public read, no writes.
+     */
+    match /analytics/live-stats {
+      allow get: if true;
+      allow list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
     }
   }
 }
