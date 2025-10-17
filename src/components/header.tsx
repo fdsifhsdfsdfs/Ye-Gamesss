@@ -39,7 +39,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 flex items-center">
+        <div className="mr-6 flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <div>
               <h1 className="text-xl font-bold font-headline bg-gradient-to-r from-primary via-primary to-primary/70 text-transparent bg-clip-text">
@@ -50,33 +50,33 @@ export function Header() {
           </Link>
         </div>
         
-        <nav className="hidden md:flex items-center gap-2 text-sm">
-          <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="sm" asChild>
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-base">
+          <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="lg" asChild className="px-4">
             <Link href="/">
-              <Home className="h-4 w-4" />
+              <Home className="h-5 w-5" />
               <span>Home</span>
             </Link>
           </Button>
           {navItems.map((item) => (
-            <Button key={item.href} variant={pathname.startsWith(item.href) ? 'secondary' : 'ghost'} size="sm" asChild>
+            <Button key={item.href} variant={pathname.startsWith(item.href) ? 'secondary' : 'ghost'} size="lg" asChild className="px-4">
               <Link href={item.href}>
-                {item.icon && <item.icon className="h-4 w-4" />}
+                {item.icon && <item.icon className="h-5 w-5" />}
                 <span>{item.label}</span>
               </Link>
             </Button>
           ))}
           {isProxysVisible && (
-            <Button variant={pathname.startsWith('/proxys') ? 'secondary' : 'ghost'} size="sm" asChild>
+            <Button variant={pathname.startsWith('/proxys') ? 'secondary' : 'ghost'} size="lg" asChild className="px-4">
               <Link href="/proxys?show=all">
-                <ShieldCheck className="h-4 w-4" />
+                <ShieldCheck className="h-5 w-5" />
                 <span>Proxys</span>
               </Link>
             </Button>
           )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm">
-                <MoreHorizontal className="h-4 w-4" />
+              <Button variant="ghost" size="lg" className="px-4">
+                <MoreHorizontal className="h-5 w-5" />
                 <span>More</span>
               </Button>
             </DropdownMenuTrigger>
