@@ -1,51 +1,45 @@
 /**
- * @fileoverview Firestore Security Rules for Ye-Games application.
+ * @file Firestore Security Rules
+ * @description This ruleset defines access control for the Ye-Games application.
  *
  * Core Philosophy:
- * This ruleset prioritizes security and data protection, enforcing strict controls
- * on data access. It is designed to allow for rapid prototyping by focusing
- * on authorization without imposing rigid schema validation.
+ *   This ruleset prioritizes security by explicitly defining access permissions for each collection and document.
+ *   It focuses on preventing unauthorized data access and modification.
+ *   The rules are designed to be strict by default, with exceptions explicitly granted.
  *
  * Data Structure:
- * - /games/{gameId}: Stores game entities.
- * - /tags/{tagId}: Stores tag entities.
- * - /analytics/live-stats: Stores a single document with live analytics data.
+ *   The Firestore database consists of three top-level collections: `/games/{gameId}`, `/tags/{tagId}`, and `/analytics/live-stats`.
+ *   - `/games/{gameId}`: Stores game data.
+ *   - `/tags/{tagId}`: Stores tag data.
+ *   - `/analytics/live-stats`: Stores live analytics data in a single document.
  *
  * Key Security Decisions:
- * - Listing of games and tags is allowed for all users.
- * - Access to analytics data is explicitly denied to all users.
- *
- * Denormalization for Authorization:
- * Not applicable, as the ruleset does not currently implement any denormalization strategies.
- * This is a prototype, so no data shape validation is performed.
- *
- * Structural Segregation:
- * Not applicable, as the ruleset does not employ structural segregation.
+ *   - Public read access is enabled for `/games` and `/tags` to allow listing and viewing game and tag information.
+ *   - Writes to `/games` and `/tags` are disallowed to prevent unauthorized modifications.
+ *   - Access to the `/analytics/live-stats` document is denied to all users, requiring backend-only access.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Allows anyone to read Games, but only allows authenticated users to create, update, or delete them.
-     * @path /games/{gameId}
-     * @allow (get, list): All users can read/list games.
-     * @allow (create, update, delete): No one can create, update or delete games.
-     * @deny (create, update, delete): All unauthorized attempts to write game data.
-     * @principle Allows public read access while restricting writes.
+     * @description Controls access to the /games collection.
+     * @path /databases/{database}/documents/games/{gameId}
+     * @allow (get, list): Any user can read game data.
+     * @deny (create, update, delete): No user can create, update, or delete game data directly.
+     * @principle Allows public read access to game data but restricts write access.
      */
     match /games/{gameId} {
       allow get, list: if true;
-      allow create, update, delete: if isSignedIn();
+      allow create, update, delete: if false;
     }
 
     /**
-     * @description Allows anyone to read Tags, but no one can create, update, or delete them.
-     * @path /tags/{tagId}
-     * @allow (get, list): All users can read/list tags.
-     * @allow (create, update, delete): No one can create, update or delete tags.
-     * @deny (create, update, delete): All unauthorized attempts to write tag data.
-     * @principle Allows public read access while restricting writes.
+     * @description Controls access to the /tags collection.
+     * @path /databases/{database}/documents/tags/{tagId}
+     * @allow (get, list): Any user can read tag data.
+     * @deny (create, update, delete): No user can create, update, or delete tag data directly.
+     * @principle Allows public read access to tag data but restricts write access.
      */
     match /tags/{tagId} {
       allow get, list: if true;
@@ -53,18 +47,13 @@ service cloud.firestore {
     }
 
     /**
-     * @description Explicitly denies all access to the analytics document.
-     * @path /analytics/live-stats
-     * @allow (get, list, create, update, delete): never
-     * @deny (get, list, create, update, delete): All access attempts.
-     * @principle Enforces maximum security by denying all access.
+     * @description Controls access to the /analytics/live-stats document.
+     * @path /databases/{database}/documents/analytics/live-stats
+     * @deny (get, list, create, update, delete): No user can read or write analytics data.
+     * @principle Restricts access to analytics data, requiring backend-only access.
      */
     match /analytics/live-stats {
       allow get, list, create, update, delete: if false;
-    }
-
-    function isSignedIn() {
-      return request.auth != null;
     }
   }
 }
