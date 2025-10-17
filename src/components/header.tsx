@@ -50,7 +50,7 @@ export function Header() {
           </Link>
         </div>
         
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-4 text-base">
+        <nav className="hidden md:flex flex-1 items-center justify-between gap-4 text-base">
           <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="lg" asChild className="px-4">
             <Link href="/">
               <Home className="h-5 w-5" />
