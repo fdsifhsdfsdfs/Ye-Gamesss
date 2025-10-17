@@ -1,10 +1,13 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Gamepad2, Globe, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { useFirebase, useUser, useDoc, useMemoFirebase, initiateAnonymousSignIn } from '@/firebase';
+import { doc, getDoc, setDoc, increment, serverTimestamp } from 'firebase/firestore';
+import { updateDocumentNonBlocking } from '@/firebase/non-blocking-updates';
 
 const FloatingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
   <div className={`absolute w-16 h-16 bg-card rounded-2xl flex items-center justify-center shadow-lg animate-float ${className}`}>
@@ -13,46 +16,52 @@ const FloatingIcon = ({ icon: Icon, className }: { icon: React.ElementType, clas
 );
 
 const VisitorsConsole = () => {
-  const [visitors, setVisitors] = useState(0);
-  const [newVisitors, setNewVisitors] = useState(0);
+  const { firestore, auth } = useFirebase();
+  const { user, isUserLoading } = useUser();
   const [displayedVisitors, setDisplayedVisitors] = useState('');
-  const [displayedNewVisitors, setDisplayedNewVisitors] = useState('');
+
+  const analyticsRef = useMemoFirebase(() => {
+    if (!firestore) return null;
+    return doc(firestore, 'analytics', 'live-stats');
+  }, [firestore]);
+
+  const { data: analyticsData, isLoading: isAnalyticsLoading } = useDoc<{ visitorCount: number }>(analyticsRef);
 
   useEffect(() => {
-    // Generate random numbers on client mount
-    const total = Math.floor(Math.random() * (2500 - 500 + 1)) + 500;
-    const fresh = Math.floor(Math.random() * (total / 2));
-    setVisitors(total);
-    setNewVisitors(fresh);
-  }, []);
+    if (!isUserLoading && !user && auth) {
+      initiateAnonymousSignIn(auth);
+    }
+  }, [isUserLoading, user, auth]);
+  
+  useEffect(() => {
+    const sessionTracked = sessionStorage.getItem('visitorTracked');
+    if (user && firestore && analyticsRef && !sessionTracked) {
+        updateDocumentNonBlocking(analyticsRef, {
+            visitorCount: increment(1)
+        });
+        sessionStorage.setItem('visitorTracked', 'true');
+    }
+  }, [user, firestore, analyticsRef]);
+
 
   useEffect(() => {
     let index = 0;
-    const visitorsText = `> Visitors Today: ${visitors.toLocaleString()}`;
-    if (visitors > 0) {
+    const totalVisitors = analyticsData?.visitorCount ?? 0;
+    const visitorsText = `> Visitors Today: ${totalVisitors.toLocaleString()}`;
+    
+    if (!isAnalyticsLoading && totalVisitors > 0) {
       const interval = setInterval(() => {
         setDisplayedVisitors(visitorsText.substring(0, index + 1));
         index++;
         if (index === visitorsText.length) {
           clearInterval(interval);
-          
-          // Start typing new visitors after a delay
-          setTimeout(() => {
-            let newIndex = 0;
-            const newVisitorsText = `> New Visitors Today: ${newVisitors.toLocaleString()}`;
-            const newInterval = setInterval(() => {
-              setDisplayedNewVisitors(newVisitorsText.substring(0, newIndex + 1));
-              newIndex++;
-              if (newIndex === newVisitorsText.length) {
-                clearInterval(newInterval);
-              }
-            }, 50);
-          }, 300);
         }
       }, 50);
       return () => clearInterval(interval);
+    } else if (!isAnalyticsLoading && totalVisitors === 0) {
+      setDisplayedVisitors(visitorsText);
     }
-  }, [visitors, newVisitors]);
+  }, [analyticsData, isAnalyticsLoading]);
 
   return (
     <div className="mt-6 bg-card/50 border border-border/20 rounded-lg p-4 max-w-md mx-auto font-code text-sm">
@@ -64,11 +73,9 @@ const VisitorsConsole = () => {
       <div className="h-12">
         <p className="whitespace-pre">
           {displayedVisitors}
-          {displayedVisitors.length < `> Visitors Today: ${visitors.toLocaleString()}`.length && <span className="animate-pulse">_</span>}
-        </p>
-        <p className="whitespace-pre">
-          {displayedVisitors.length === `> Visitors Today: ${visitors.toLocaleString()}`.length && displayedNewVisitors.length < `> New Visitors Today: ${newVisitors.toLocaleString()}`.length && <span className="animate-pulse">_</span>}
-          {displayedNewVisitors}
+          {(!analyticsData && isAnalyticsLoading) || (displayedVisitors.length < `> Visitors Today: ${analyticsData?.visitorCount?.toLocaleString() ?? 0}`.length) ? (
+            <span className="animate-pulse">_</span>
+          ) : null}
         </p>
       </div>
     </div>

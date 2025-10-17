@@ -1,27 +1,27 @@
 /**
- * @file Firebase Security Rules for Ye-Games application.
+ * @fileoverview Firestore Security Rules for Ye-Games application.
  *
  * Core Philosophy:
- * This ruleset provides public read access to both `games` and `tags` collections.
- * Write access is completely disallowed for all users.
+ * This ruleset provides completely public read access to both `games` and `tags` collections. Write access is completely disabled, effectively making these collections read-only. This allows the application to display game and tag data to all users without authentication.
  *
  * Data Structure:
- * The database contains two top-level collections: `/games/{gameId}` and `/tags/{tagId}`.
+ * The database consists of two top-level collections: `/games/{gameId}` and `/tags/{tagId}`.  There are no subcollections.
  *
  * Key Security Decisions:
- * - Public read access is granted to both collections, assuming the data is non-sensitive and intended for public consumption.
- * - Write access is completely denied to all users. To enable write access, update the rules to implement proper authorization logic.
+ * - User listing is disallowed.
+ * - Games and Tags are publicly readable.
+ * - Writes are disabled, to ensure no accidental writes can occur in the Prototyping stage.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Allows public read access to games. Write access is denied.
+     * @description Grants public read access to games, but restricts all write access.
      * @path /games/{gameId}
-     * @allow (get, list) Allows any user to read game data.
-     * @deny (create, update, delete) Denies all users from creating, updating, or deleting game data.
-     * @principle Grants public read access and restricts write access.
+     * @allow (get, list) Any user can read game data.
+     * @deny (create, update, delete) No user can create, update, or delete games.
+     * @principle Allows public read access while preventing unauthorized writes.
      */
     match /games/{gameId} {
       allow get, list: if true;
@@ -29,11 +29,11 @@ service cloud.firestore {
     }
 
     /**
-     * @description Allows public read access to tags. Write access is denied.
+     * @description Grants public read access to tags, but restricts all write access.
      * @path /tags/{tagId}
-     * @allow (get, list) Allows any user to read tag data.
-     * @deny (create, update, delete) Denies all users from creating, updating, or deleting tag data.
-     * @principle Grants public read access and restricts write access.
+     * @allow (get, list) Any user can read tag data.
+     * @deny (create, update, delete) No user can create, update, or delete tags.
+     * @principle Allows public read access while preventing unauthorized writes.
      */
     match /tags/{tagId} {
       allow get, list: if true;

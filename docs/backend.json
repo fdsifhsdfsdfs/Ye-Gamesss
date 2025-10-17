@@ -1,3 +1,4 @@
+
 {
   "entities": {
     "Game": {
@@ -63,6 +64,20 @@
         "id",
         "name"
       ]
+    },
+    "Analytics": {
+      "title": "Analytics",
+      "description": "Stores analytics data for the application.",
+      "type": "object",
+      "properties": {
+        "visitorCount": {
+          "type": "number",
+          "description": "Total number of visitors."
+        }
+      },
+      "required": [
+        "visitorCount"
+      ]
     }
   },
   "auth": {
@@ -72,40 +87,23 @@
     ]
   },
   "firestore": {
-    "structure": [
-      {
-        "path": "/games/{gameId}",
-        "definition": {
-          "entityName": "Game",
-          "schema": {
-            "$ref": "#/backend/entities/Game"
-          },
-          "description": "Stores game entities. Each game has a unique ID. No denormalized authorization fields are included as authorization is not dependent on any parent document attributes.",
-          "params": [
-            {
-              "name": "gameId",
-              "description": "The unique identifier for the game."
-            }
-          ]
-        }
+    "/games/{gameId}": {
+      "schema": {
+        "$ref": "#/backend/entities/Game"
       },
-      {
-        "path": "/tags/{tagId}",
-        "definition": {
-          "entityName": "Tag",
-          "schema": {
-            "$ref": "#/backend/entities/Tag"
-          },
-          "description": "Stores tag entities. Each tag has a unique ID. No denormalized authorization fields are included as authorization is not dependent on any parent document attributes.",
-          "params": [
-            {
-              "name": "tagId",
-              "description": "The unique identifier for the tag."
-            }
-          ]
-        }
-      }
-    ],
-    "reasoning": "The Firestore structure is designed to efficiently manage games and tags for the Ye-Games application. It focuses on simplicity and scalability. The structure prioritizes structural segregation, separating game and tag data into their respective collections, and avoids complex authorization rules. All security rules rely on `request.auth.uid`. This structure supports the core features of the application including the dynamic home page, interactive game library, and admin content management.\n\n`Games` and `Tags` are stored in separate collections. This segregation simplifies querying and management. Since there is no ownership or complex authorization requirements beyond potential administrative roles (which would be implemented via a separate role collection), this flat structure is sufficient. This structure facilitates secure `list` operations (QAPs) because there is no need to filter based on complex ownership or membership criteria; access is controlled at the top level, and administrative privileges would be managed separately.\n\nAuthorization Independence is achieved because authorization is handled at the collection level for administrators. If more granular control were needed (e.g., game-specific editors), the 'Game' object would include a 'members' map as detailed in the design strategy."
+      "description": "Stores game entities."
+    },
+    "/tags/{tagId}": {
+      "schema": {
+        "$ref": "#/backend/entities/Tag"
+      },
+      "description": "Stores tag entities."
+    },
+    "/analytics/live-stats": {
+      "schema": {
+        "$ref": "#/backend/entities/Analytics"
+      },
+      "description": "A single document to store live analytics data like visitor counts."
+    }
   }
 }
